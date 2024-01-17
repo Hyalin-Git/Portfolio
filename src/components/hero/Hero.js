@@ -42,6 +42,13 @@ export default function Hero() {
 	return (
 		<div className={styles.hero}>
 			<div className={styles.hero__background}>
+				<div>
+					{/* title */}
+					<div></div>
+					{/* unlocker */}
+					<div></div>
+				</div>
+				{/* index  */}
 				<div></div>
 			</div>
 			<div className={styles.hero__background} onClick={swapBanners}>
