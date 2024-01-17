@@ -14,7 +14,7 @@
 	background-image: url("../../../public/images/first_banner.png");
 	transform-origin: center center 0;
 	background-position: center;
-	width: 80%;
+	width: 100%;
 }
 
 .hero__background:last-child {
@@ -23,4 +23,14 @@
 	transform-origin: center center 0;
 	background-position: center;
 	width: 20%;
+	animation: slidesIn 450ms forwards;
+}
+
+@keyframes slidesIn {
+	from {
+		width: 0;
+	}
+	to {
+		width: 20%;
+	}
 }

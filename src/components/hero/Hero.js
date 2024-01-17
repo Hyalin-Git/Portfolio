@@ -23,7 +23,7 @@ export default function Hero() {
 
 	const checkIndex = banners.length === index + 1 ? 0 : index + 1;
 
-	function swapBanner(e) {
+	function swapBanners(e) {
 		const rightBanner = e.target;
 		const LeftBanner = rightBanner.previousSibling;
 
@@ -34,6 +34,8 @@ export default function Hero() {
 			banners.length === index + 1 ? setIndex(0) : setIndex(index + 1);
 			LeftBanner.style.backgroundImage = `url(${banners[index].image})`;
 			rightBanner.style.backgroundImage = `url(${banners[checkIndex].image})`;
+			LeftBanner.classList.remove("swap");
+			rightBanner.classList.remove("swap");
 		}, 480);
 	}
 
@@ -42,7 +44,7 @@ export default function Hero() {
 			<div className={styles.hero__background}>
 				<div></div>
 			</div>
-			<div className={styles.hero__background} onClick={swapBanner}>
+			<div className={styles.hero__background} onClick={swapBanners}>
 				<div></div>
 			</div>
 		</div>
