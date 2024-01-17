@@ -1,6 +1,10 @@
+:root {
+	--primary-color: #e34234;
+	--secondary-color: #515251;
+}
 body {
 	margin: 0;
-	background-color: grey;
 	padding: 0;
+	background-color: black;
 	color: white;
 }
