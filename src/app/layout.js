@@ -1,5 +1,5 @@
 import { rajdhani } from "@/libs/utils";
-import "./globals.css";
+import "../styles/globals.css";
 import Hero from "@/components/hero/Hero";
 import Header from "@/components/header/Header";
 

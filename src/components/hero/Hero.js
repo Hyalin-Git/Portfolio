@@ -1,9 +1,11 @@
 "use client";
-import { useState } from "react";
-import styles from "./hero.module.css";
+import { useEffect, useRef, useState } from "react";
+import styles from "../../styles/components/hero.module.css";
 
 export default function Hero() {
-	const [index, setIndex] = useState(1);
+	const [index, setIndex] = useState(0);
+	const leftBackground = useRef(null);
+	const rightBackground = useRef(null);
 
 	const banners = [
 		{
@@ -24,24 +26,30 @@ export default function Hero() {
 	const checkIndex = banners.length === index + 1 ? 0 : index + 1;
 
 	function swapBanners(e) {
-		const rightBanner = e.target;
-		const LeftBanner = rightBanner.previousSibling;
+		e.preventDefault();
 
-		LeftBanner.classList.add("swap");
-		rightBanner.classList.add("swap");
+		leftBackground.current.classList.add("swap");
+		rightBackground.current.classList.add("swap");
 
 		setTimeout(() => {
 			banners.length === index + 1 ? setIndex(0) : setIndex(index + 1);
-			LeftBanner.style.backgroundImage = `url(${banners[index].image})`;
-			rightBanner.style.backgroundImage = `url(${banners[checkIndex].image})`;
-			LeftBanner.classList.remove("swap");
-			rightBanner.classList.remove("swap");
+
+			leftBackground.current.style.backgroundImage = `url(${banners[index].image})`;
+			rightBackground.current.style.backgroundImage = `url(${banners[checkIndex].image})`;
+
+			leftBackground.current.classList.remove("swap");
+			rightBackground.current.classList.remove("swap");
 		}, 480);
 	}
 
+	useEffect(() => {
+		leftBackground.current.style.backgroundImage = `url(${banners[index].image})`;
+		rightBackground.current.style.backgroundImage = `url(${banners[checkIndex].image})`;
+	}, [index]);
+
 	return (
-		<div className={styles.hero}>
-			<div className={styles.hero__background}>
+		<div className={styles.container}>
+			<div className={styles.background} ref={leftBackground}>
 				<div>
 					{/* title */}
 					<div></div>
@@ -51,7 +59,10 @@ export default function Hero() {
 				{/* index  */}
 				<div></div>
 			</div>
-			<div className={styles.hero__background} onClick={swapBanners}>
+			<div
+				className={styles.background}
+				ref={rightBackground}
+				onClick={swapBanners}>
 				<div></div>
 			</div>
 		</div>
