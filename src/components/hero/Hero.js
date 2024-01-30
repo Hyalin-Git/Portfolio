@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Markdown from "markdown-to-jsx";
 import styles from "../../styles/components/hero.module.css";
 
 export default function Hero() {
@@ -9,16 +10,19 @@ export default function Hero() {
 
 	const banners = [
 		{
-			text: "Développeur web, full-stack",
+			id: 1,
+			text: `<h1>Développeur web, <br> <span className={${styles.top}}>full-stack</span><span className={${styles.bottom}}>full-stack</span></h1>`,
 			image: "/images/first_banner.png",
 		},
 		{
+			id: 2,
+			text: "<h1>à propos de moi</h1>",
 			image: "/images/second_banner.png",
 		},
+		{ id: 3, text: "<h1>Mes projets</h1>", image: "/images/third_banner.png" },
 		{
-			image: "/images/third_banner.png",
-		},
-		{
+			id: 4,
+			text: "<h1>Me contacter</h1>",
 			image: "/images/fourth_banner.png",
 		},
 	];
@@ -50,9 +54,11 @@ export default function Hero() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.background} ref={leftBackground}>
-				<div>
+				<div className={styles.content}>
 					{/* title */}
-					<div></div>
+					<div>
+						<Markdown>{banners[index]?.text}</Markdown>
+					</div>
 					{/* unlocker */}
 					<div></div>
 				</div>
@@ -63,7 +69,9 @@ export default function Hero() {
 				className={styles.background}
 				ref={rightBackground}
 				onClick={swapBanners}>
-				<div></div>
+				<div className={styles.content}>
+					<Markdown>{banners[checkIndex]?.text}</Markdown>
+				</div>
 			</div>
 		</div>
 	);
