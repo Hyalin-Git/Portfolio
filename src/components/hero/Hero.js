@@ -11,18 +11,18 @@ export default function Hero() {
 	const banners = [
 		{
 			id: 1,
-			text: `<h1>Développeur web, <br> <span className={${styles.top}}>full-stack</span><span className={${styles.bottom}}>full-stack</span></h1>`,
+			text: `#Développeur web, **full-stack** **full-stack**`,
 			image: "/images/first_banner.png",
 		},
 		{
 			id: 2,
-			text: "<h1>à propos de moi</h1>",
+			text: "#à propos de moi",
 			image: "/images/second_banner.png",
 		},
-		{ id: 3, text: "<h1>Mes projets</h1>", image: "/images/third_banner.png" },
+		{ id: 3, text: "#Mes projets", image: "/images/third_banner.png" },
 		{
 			id: 4,
-			text: "<h1>Me contacter</h1>",
+			text: "#Me contacter",
 			image: "/images/fourth_banner.png",
 		},
 	];
@@ -32,8 +32,8 @@ export default function Hero() {
 	function swapBanners(e) {
 		e.preventDefault();
 
-		leftBackground.current.classList.add("swap");
-		rightBackground.current.classList.add("swap");
+		leftBackground.current.classList.add(styles.swap);
+		rightBackground.current.classList.add(styles.swap);
 
 		setTimeout(() => {
 			banners.length === index + 1 ? setIndex(0) : setIndex(index + 1);
@@ -41,8 +41,8 @@ export default function Hero() {
 			leftBackground.current.style.backgroundImage = `url(${banners[index].image})`;
 			rightBackground.current.style.backgroundImage = `url(${banners[checkIndex].image})`;
 
-			leftBackground.current.classList.remove("swap");
-			rightBackground.current.classList.remove("swap");
+			leftBackground.current.classList.remove(styles.swap);
+			rightBackground.current.classList.remove(styles.swap);
 		}, 480);
 	}
 

@@ -8,23 +8,3 @@ body {
 	background-color: black;
 	color: white;
 }
-
-/* hero backgrounds animations  */
-.swap:first-child {
-	transition: width 450ms linear;
-	width: 0% !important;
-}
-
-.swap:last-child {
-	animation: openAnim 450ms forwards !important;
-}
-
-@keyframes openAnim {
-	from {
-		width: 20%;
-	}
-
-	to {
-		width: 100%;
-	}
-}
