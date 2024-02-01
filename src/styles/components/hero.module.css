@@ -9,9 +9,12 @@
 }
 
 .background {
+	position: relative;
 	height: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
 }
 
 .background:first-child {
@@ -113,6 +116,26 @@
 .content strong:nth-child(2) {
 	color: white;
 	clip-path: polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%);
+}
+
+.index {
+	position: absolute;
+	z-index: 200;
+	bottom: 40px;
+	left: 40px;
+	display: flex;
+	gap: 20px;
+}
+
+.index div {
+	width: 220px;
+	height: 4px;
+	background-color: white;
+	border-radius: 14px;
+}
+
+.index .color {
+	background-color: var(--primary-color);
 }
 
 /* keyframe  */

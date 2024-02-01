@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Markdown from "markdown-to-jsx";
 import styles from "../../styles/components/hero.module.css";
+import clsx from "clsx";
 
 export default function Hero() {
 	const [index, setIndex] = useState(0);
@@ -49,6 +50,14 @@ export default function Hero() {
 	useEffect(() => {
 		leftBackground.current.style.backgroundImage = `url(${banners[index].image})`;
 		rightBackground.current.style.backgroundImage = `url(${banners[checkIndex].image})`;
+
+		// Hydrate index color
+		const indexTracker = document.getElementsByClassName("index-tracker");
+
+		for (let i = 0; i < indexTracker.length; i++) {
+			const getTrack = indexTracker[i].getAttribute("data-idx");
+			indexTracker[i].classList.toggle(styles.color, getTrack <= index);
+		}
 	}, [index]);
 
 	return (
@@ -63,7 +72,16 @@ export default function Hero() {
 					<div></div>
 				</div>
 				{/* index  */}
-				<div></div>
+				<div className={styles.index}>
+					{banners.map((banner, idx) => {
+						return (
+							<div
+								className={clsx("index-tracker")}
+								key={idx}
+								data-idx={idx}></div>
+						);
+					})}
+				</div>
 			</div>
 			<div
 				className={styles.background}
