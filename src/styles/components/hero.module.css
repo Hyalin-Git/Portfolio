@@ -6,6 +6,7 @@
 	top: 0;
 	z-index: -100;
 	overflow: hidden;
+	border-bottom: 8px solid white;
 }
 
 .background {
@@ -132,10 +133,12 @@
 	height: 4px;
 	background-color: white;
 	border-radius: 14px;
+	transition: all 250ms linear;
 }
 
 .index .color {
 	background-color: var(--primary-color);
+	transition: all 250ms linear;
 }
 
 /* keyframe  */

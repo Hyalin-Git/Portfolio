@@ -17,13 +17,17 @@ export default function Hero() {
 		},
 		{
 			id: 2,
-			text: "#à propos de moi",
+			text: "#Yo.",
 			image: "/images/second_banner.png",
 		},
-		{ id: 3, text: "#Mes projets", image: "/images/third_banner.png" },
+		{
+			id: 3,
+			text: "#Yo.",
+			image: "/images/third_banner.png",
+		},
 		{
 			id: 4,
-			text: "#Me contacter",
+			text: "#Yo ?",
 			image: "/images/fourth_banner.png",
 		},
 	];

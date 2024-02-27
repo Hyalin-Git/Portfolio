@@ -27,18 +27,20 @@
 
 /* burger menu  */
 
-.nav__burger__menu {
+.nav__burger__btn {
+	position: relative;
+	z-index: 6000;
 	cursor: pointer;
 }
 
-.nav__burger__menu > div {
+.nav__burger__btn > div {
 	background-color: white;
 	margin-top: 5px;
 	width: 25px;
 	height: 2px;
 }
 
-.nav__burger__menu > :nth-child(1) {
+.nav__burger__btn > :nth-child(1) {
 	background-color: transparent;
 	background-image: linear-gradient(
 		to left,
@@ -49,7 +51,7 @@
 	);
 }
 
-.nav__burger__menu > :nth-child(3) {
+.nav__burger__btn > :nth-child(3) {
 	background-color: transparent;
 	background-image: linear-gradient(
 		to left,
@@ -58,4 +60,27 @@
 		transparent 45%,
 		white 0%
 	);
+}
+
+.nav__burger {
+	left: 0;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav__burger ul {
+	list-style-type: none;
+	font-size: 4rem;
+	font-weight: bold;
+}
+
+.nav__burger li:nth-child(odd) {
+	text-align: right;
 }

@@ -1,0 +1,53 @@
+[
+	{
+		"id": 1,
+		"title": "Un vrai couteau suisse à porté de main,",
+		"name": "Arya",
+		"description": " Lorem ipsum dolor sit amet consectetur adipiscing elit. Phasellus lacinia arcu lorem, vel ultricies libero vehicula at. Suspendisse mattis in est id fringilla. Pellentesque tristique urna sit amet tellus facilisis iaculis. Curabitur placerat diam vel nunc lacinia auctor. Nullam nec mauris vitae orci convallis sagittis at a quam. Vivamus id risus vitae erat feugiat iaculis eget id sapien. Integer sollicitudin gravida lacus a efficitur.",
+		"status": "progress",
+		"skills": [
+			"./images/svg/react.svg",
+			"./images/svg/css.svg",
+			"./images/svg/javascript.svg"
+		],
+		"images": [
+			"images/arya/arya-foreground.png",
+			"./images/oricam/OricamBackgroundLeft.JPG",
+			"./images/oricam/OricamBackgroundRight.JPG"
+		]
+	},
+	{
+		"id": 2,
+		"title": "Vous avez besoin de changer d'air ?",
+		"name": "Kasa",
+		"description": " Kasa is a really good compagny adipiscing elit. Phasellus lacinia arcu lorem, vel ultricies libero vehicula at. Suspendisse mattis in est id fringilla. Pellentesque tristique urna sit amet tellus facilisis iaculis. Curabitur placerat diam vel nunc lacinia auctor. Nullam nec mauris vitae orci convallis sagittis at a quam. Vivamus id risus vitae erat feugiat iaculis eget id sapien. Integer sollicitudin gravida lacus a efficitur.",
+		"status": "done",
+		"skills": [
+			"./images/svg/react.svg",
+			"./images/svg/javascript.svg",
+			"./images/svg/sass.svg"
+		],
+		"images": [
+			"./images/kasa/KasaForeground.png",
+			"./images/kasa/KasaBackgroundLeft.png",
+			"./images/kasa/KasaBackgroundRight.png"
+		]
+	},
+	{
+		"id": 3,
+		"title": "Vous venez de dire Peter Parker ?",
+		"name": "Oricam",
+		"description": " Lorem ipsum dolor sit amet consectetur adipiscing elit. Phasellus lacinia arcu lorem, vel ultricies libero vehicula at. Suspendisse mattis in est id fringilla. Pellentesque tristique urna sit amet tellus facilisis iaculis. Curabitur placerat diam vel nunc lacinia auctor. Nullam nec mauris vitae orci convallis sagittis at a quam. Vivamus id risus vitae erat feugiat iaculis eget id sapien. Integer sollicitudin gravida lacus a efficitur.",
+		"status": "done",
+		"skills": [
+			"./images/svg/html.svg",
+			"./images/svg/bootstrap.svg",
+			"./images/svg/javascript.svg"
+		],
+		"images": [
+			"./images/oricam/OricamForeground.JPG",
+			"./images/oricam/OricamBackgroundLeft.JPG",
+			"./images/oricam/OricamBackgroundRight.JPG"
+		]
+	}
+]

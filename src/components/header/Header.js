@@ -1,9 +1,18 @@
 "use client";
 import { useState } from "react";
-import styles from "./header.module.css";
+import styles from "@/styles/layouts/header.module.css";
 
 export default function Header() {
-	const [open, setOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
+
+	function handleBurgerMenu(e) {
+		e.preventDefault();
+		if (isOpen) {
+			setIsOpen(false);
+		} else {
+			setIsOpen(true);
+		}
+	}
 
 	return (
 		<header>
@@ -14,11 +23,22 @@ export default function Header() {
 					<h1>Hyalin</h1>
 				</div>
 				{/* Burger menu  */}
-				<div className={styles.nav__burger__menu}>
+				<div onClick={handleBurgerMenu} className={styles.nav__burger__btn}>
 					<div></div>
 					<div></div>
 					<div></div>
 				</div>
+
+				{isOpen && (
+					<div className={styles.nav__burger}>
+						<ul>
+							<li>Accueil</li>
+							<li>À propos de moi</li>
+							<li>Mes projets</li>
+							<li>Contact</li>
+						</ul>
+					</div>
+				)}
 			</nav>
 		</header>
 	);

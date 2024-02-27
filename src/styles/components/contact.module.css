@@ -1,0 +1,68 @@
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.content {
+	min-width: 600px;
+}
+.title h2 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+}
+
+.description {
+	font-weight: 300;
+	font-size: 1.1rem;
+}
+
+.form {
+	position: relative;
+	z-index: 10;
+	min-width: 600px;
+}
+
+.form__input input {
+	background: none;
+	outline: none;
+	transition: 150ms all linear;
+	border: 1px solid var(--secondary-color);
+	padding: 10px;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.form input:focus {
+	transition: 150ms all linear;
+	border: 1px solid white;
+}
+
+.form__input {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+}
+
+.form textarea {
+	background: none;
+	outline: none;
+	border: 1px solid var(--secondary-color);
+	margin-top: 5px;
+	padding: 10px;
+	box-sizing: border-box;
+	width: 100%;
+	transition: 150ms all linear;
+}
+
+.form textarea:focus {
+	transition: 150ms all linear;
+	border: 1px solid white;
+}
+.buttons button {
+	max-width: inherit;
+	width: 100%;
+}
