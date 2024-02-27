@@ -41,6 +41,7 @@ export default function Project({ project }) {
 							alt="back"
 							width={620}
 							height={620}
+							quality={100}
 						/>
 					</div>
 					<div className={styles.backgrounds}>

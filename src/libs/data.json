@@ -8,7 +8,10 @@
 		"skills": [
 			"./images/svg/react.svg",
 			"./images/svg/css.svg",
-			"./images/svg/javascript.svg"
+			"./images/svg/javascript.svg",
+			"./images/svg/nodeJs.svg",
+			"./images/svg/expressJs.svg",
+			"./images/svg/mongodb.svg"
 		],
 		"images": [
 			"images/arya/arya-foreground.png",
@@ -28,7 +31,7 @@
 			"./images/svg/sass.svg"
 		],
 		"images": [
-			"./images/kasa/KasaForeground.png",
+			"images/kasa/KasaForeground.png",
 			"./images/kasa/KasaBackgroundLeft.png",
 			"./images/kasa/KasaBackgroundRight.png"
 		]
@@ -45,7 +48,7 @@
 			"./images/svg/javascript.svg"
 		],
 		"images": [
-			"./images/oricam/OricamForeground.JPG",
+			"images/oricam/OricamForeground.JPG",
 			"./images/oricam/OricamBackgroundLeft.JPG",
 			"./images/oricam/OricamBackgroundRight.JPG"
 		]
