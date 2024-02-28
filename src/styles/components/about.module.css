@@ -64,6 +64,7 @@
 }
 
 .container__right {
+	align-self: flex-start;
 	min-width: 400px;
 }
 
@@ -72,10 +73,50 @@
 .skills {
 	display: flex;
 	flex-direction: column-reverse;
+	align-items: center;
+	gap: 20px;
 }
 
 .skills h2 {
 	text-align: right;
 	font-size: 2.5rem;
 	text-transform: uppercase;
+}
+
+.skills__tree {
+	display: flex;
+	gap: 20px;
+}
+
+.skills__tree img {
+	filter: invert(100%) sepia(77%) saturate(0%) hue-rotate(315deg)
+		brightness(110%) contrast(96%);
+}
+
+.frontend__title {
+	margin-right: 50px;
+	font-weight: 300;
+	color: grey;
+}
+
+.backend__title {
+	margin-left: 50px;
+	font-weight: 300;
+	color: grey;
+	align-self: flex-end;
+}
+
+.skills__tree .line {
+	width: 1px;
+	background-color: white;
+}
+
+.backend__skills {
+	align-self: center;
+}
+
+/* EXPERIENCE  */
+
+.experience span {
+	font-weight: bold;
 }

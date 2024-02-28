@@ -53,22 +53,137 @@ export default function About() {
 						<br />
 						Mélange de savoirs.
 					</h2>
-					<div className={styles.frontend__skills}>
-						
-						<ul>
-
-						</ul>
-					</div>
-					<div className={styles.line}></div>
-					<div className={styles.backend__skills}>
-					<ul>
-
-					</ul>
+					<div className={styles.skills__tree}>
+						<span className={styles.frontend__title}>Frontend</span>
+						<div className={styles.frontend__skills}>
+							<ul>
+								<li>
+									<Image
+										src="./images/svg/html.svg"
+										alt="logo de compétence"
+										width={25}
+										height={25}
+									/>
+								</li>
+								<li>
+									<Image
+										src="./images/svg/css.svg"
+										alt="logo de compétence"
+										width={25}
+										height={25}
+									/>
+								</li>
+								<li>
+									<Image
+										src="./images/svg/sass.svg"
+										alt="logo de compétence"
+										width={25}
+										height={25}
+									/>
+								</li>
+								<li>
+									<Image
+										src="./images/svg/bootstrap.svg"
+										alt="logo de compétence"
+										width={25}
+										height={25}
+									/>
+								</li>
+								<li>
+									<Image
+										src="./images/svg/styled-components.svg"
+										alt="logo de compétence"
+										width={25}
+										height={25}
+									/>
+								</li>
+								<li>
+									<Image
+										src="./images/svg/javascript.svg"
+										alt="logo de compétence"
+										width={25}
+										height={25}
+									/>
+								</li>
+								<li>
+									<Image
+										src="./images/svg/next-js.svg"
+										alt="logo de compétence"
+										width={25}
+										height={25}
+									/>
+								</li>
+								<li>
+									<Image
+										src="./images/svg/react.svg"
+										alt="logo de compétence"
+										width={25}
+										height={25}
+									/>
+								</li>
+								<li>
+									<Image
+										src="./images/svg/redux.svg"
+										alt="logo de compétence"
+										width={25}
+										height={25}
+									/>
+								</li>
+							</ul>
+						</div>
+						<div className={styles.line}></div>
+						<div className={styles.backend__skills}>
+							<ul>
+								<li>
+									<Image
+										src="./images/svg/nodeJs.svg"
+										alt="logo de compétence"
+										width={25}
+										height={25}
+									/>
+								</li>
+								<li>
+									<Image
+										src="./images/svg/expressJs.svg"
+										alt="logo de compétence"
+										width={25}
+										height={25}
+									/>
+								</li>
+								<li>
+									<Image
+										src="./images/svg/mongodb.svg"
+										alt="logo de compétence"
+										width={25}
+										height={25}
+									/>
+								</li>
+								<li>
+									<Image
+										src="./images/svg/mySQL.svg"
+										alt="logo de compétence"
+										width={25}
+										height={25}
+									/>
+								</li>
+							</ul>
+						</div>
+						<span className={styles.backend__title}>Backend</span>
 					</div>
 				</div>
 				{/* ex */}
-				<div>
-					<h2>Éxpériences</h2>
+				<div className={styles.experience}>
+					<h2>Éxpériences.</h2>
+					<div>
+						<ul>
+							<li>
+								<span>- OpenClassRooms</span>
+							</li>
+							<li>
+								<span>- Freelance</span>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>

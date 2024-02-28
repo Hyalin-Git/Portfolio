@@ -34,37 +34,45 @@ export default function Project({ project }) {
 				</div>
 			</div>
 			<div className={styles.card__right}>
-				<div className={styles.card__images}>
-					<div className={styles.foreground}>
-						<Image
-							src={`/${project.images[0]}`}
-							alt="back"
-							width={620}
-							height={620}
-							quality={100}
-						/>
-					</div>
-					<div className={styles.backgrounds}>
-						<div>
+				{project.images ? (
+					<div className={styles.card__images}>
+						<div className={styles.foreground}>
 							<Image
-								className={styles.background__left}
-								src="/images/kasa/KasaBackgroundLeft.png"
+								src={`/${project.images[0]}`}
 								alt="back"
-								width={220}
-								height={220}
+								width={620}
+								height={620}
+								quality={100}
 							/>
 						</div>
-						<div>
-							<Image
-								className={styles.background__right}
-								src="/images/kasa/KasaBackgroundRight.png"
-								alt="back"
-								width={420}
-								height={220}
-							/>
-						</div>
+						{/* <div className={styles.backgrounds}>
+							<div>
+								<Image
+									className={styles.background__left}
+									src={`/${project.images[1]}`}
+									alt="back"
+									width={220}
+									height={220}
+									quality={100}
+								/>
+							</div>
+							<div>
+								<Image
+									className={styles.background__right}
+									src={`/${project.images[2]}`}
+									alt="back"
+									width={420}
+									height={220}
+									quality={100}
+								/>
+							</div>
+						</div> */}
 					</div>
-				</div>
+				) : (
+					<div className={styles.card__no__image}>
+						<h3>Aucune image n'est disponible pour le moment</h3>
+					</div>
+				)}
 			</div>
 		</article>
 	);

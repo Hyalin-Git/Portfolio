@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Markdown from "markdown-to-jsx";
 import styles from "../../styles/components/hero.module.css";
 import clsx from "clsx";
+import { rajdhani } from "@/libs/utils";
 
 export default function Hero() {
 	const [index, setIndex] = useState(0);
@@ -17,17 +19,20 @@ export default function Hero() {
 		},
 		{
 			id: 2,
-			text: "#Yo.",
+			text: "#En apprendre plus, sur moi.",
+			btn: "à propos de moi",
 			image: "/images/second_banner.png",
 		},
 		{
 			id: 3,
-			text: "#Yo.",
+			text: "#Un voyage à travers la créativité.",
+			btn: "Voir mes projets",
 			image: "/images/third_banner.png",
 		},
 		{
 			id: 4,
-			text: "#Yo ?",
+			text: "#Toc à ma porte numérique.",
+			btn: "Me contacter",
 			image: "/images/fourth_banner.png",
 		},
 	];
@@ -70,10 +75,46 @@ export default function Hero() {
 				<div className={styles.content}>
 					{/* title */}
 					<div>
-						<Markdown>{banners[index]?.text}</Markdown>
+						<div className={styles.title}>
+							<Markdown>{banners[index]?.text}</Markdown>
+						</div>
+						{banners[index].btn && (
+							<div className={styles.buttons}>
+								<button className={clsx(rajdhani.className, "hero-btn")}>
+									{banners[index].btn}
+								</button>
+							</div>
+						)}
 					</div>
 					{/* unlocker */}
 					<div></div>
+				</div>
+
+				<div className={styles.social}>
+					<div>
+						<Image
+							src="./images/svg/linkedIn.svg"
+							alt="yas"
+							width={40}
+							height={40}
+						/>
+					</div>
+					<div>
+						<Image
+							src="./images/svg/twitter.svg"
+							alt="yas"
+							width={40}
+							height={40}
+						/>
+					</div>
+					<div>
+						<Image
+							src="./images/svg/github.svg"
+							alt="yas"
+							width={40}
+							height={40}
+						/>
+					</div>
 				</div>
 				{/* index  */}
 				<div className={styles.index}>
@@ -92,7 +133,18 @@ export default function Hero() {
 				ref={rightBackground}
 				onClick={swapBanners}>
 				<div className={styles.content}>
-					<Markdown>{banners[checkIndex]?.text}</Markdown>
+					<div>
+						<div className={styles.title}>
+							<Markdown>{banners[checkIndex]?.text}</Markdown>
+						</div>
+						{banners[checkIndex].btn && (
+							<div className={styles.buttons}>
+								<button className={clsx(rajdhani.className, "hero-btn")}>
+									{banners[checkIndex]?.btn}
+								</button>
+							</div>
+						)}
+					</div>
 				</div>
 			</div>
 		</div>

@@ -6,7 +6,7 @@
 		"description": " Lorem ipsum dolor sit amet consectetur adipiscing elit. Phasellus lacinia arcu lorem, vel ultricies libero vehicula at. Suspendisse mattis in est id fringilla. Pellentesque tristique urna sit amet tellus facilisis iaculis. Curabitur placerat diam vel nunc lacinia auctor. Nullam nec mauris vitae orci convallis sagittis at a quam. Vivamus id risus vitae erat feugiat iaculis eget id sapien. Integer sollicitudin gravida lacus a efficitur.",
 		"status": "progress",
 		"skills": [
-			"./images/svg/react.svg",
+			"./images/svg/next-js.svg",
 			"./images/svg/css.svg",
 			"./images/svg/javascript.svg",
 			"./images/svg/nodeJs.svg",
@@ -21,6 +21,21 @@
 	},
 	{
 		"id": 2,
+		"title": "Envie de stratégie ?",
+		"name": "Fate Alignement",
+		"description": "Fate Alignement et un projet personnel qui me tient à coeur, sans en dire trop pour le moment, Fate alignement sera un jeu, tour par tour stratégique disponible sur tous les navigateurs internet et à terme pourquoi pas en faire une application téléphone.",
+		"status": "progress",
+		"skills": [
+			"./images/svg/next-js.svg",
+			"./images/svg/css.svg",
+			"./images/svg/javascript.svg",
+			"./images/svg/nodeJs.svg",
+			"./images/svg/expressJs.svg",
+			"./images/svg/mongodb.svg"
+		]
+	},
+	{
+		"id": 3,
 		"title": "Vous avez besoin de changer d'air ?",
 		"name": "Kasa",
 		"description": " Kasa is a really good compagny adipiscing elit. Phasellus lacinia arcu lorem, vel ultricies libero vehicula at. Suspendisse mattis in est id fringilla. Pellentesque tristique urna sit amet tellus facilisis iaculis. Curabitur placerat diam vel nunc lacinia auctor. Nullam nec mauris vitae orci convallis sagittis at a quam. Vivamus id risus vitae erat feugiat iaculis eget id sapien. Integer sollicitudin gravida lacus a efficitur.",
@@ -37,7 +52,7 @@
 		]
 	},
 	{
-		"id": 3,
+		"id": 4,
 		"title": "Vous venez de dire Peter Parker ?",
 		"name": "Oricam",
 		"description": " Lorem ipsum dolor sit amet consectetur adipiscing elit. Phasellus lacinia arcu lorem, vel ultricies libero vehicula at. Suspendisse mattis in est id fringilla. Pellentesque tristique urna sit amet tellus facilisis iaculis. Curabitur placerat diam vel nunc lacinia auctor. Nullam nec mauris vitae orci convallis sagittis at a quam. Vivamus id risus vitae erat feugiat iaculis eget id sapien. Integer sollicitudin gravida lacus a efficitur.",
@@ -49,8 +64,8 @@
 		],
 		"images": [
 			"images/oricam/OricamForeground.JPG",
-			"./images/oricam/OricamBackgroundLeft.JPG",
-			"./images/oricam/OricamBackgroundRight.JPG"
+			"images/oricam/OricamBackgroundLeft.JPG",
+			"images/oricam/OricamBackgroundRight.JPG"
 		]
 	}
 ]

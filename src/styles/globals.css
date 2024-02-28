@@ -2,6 +2,9 @@
 	--primary-color: #e34234;
 	--secondary-color: #515251;
 }
+html::-webkit-scrollbar {
+	display: none;
+}
 body {
 	position: relative;
 	margin: 0;
@@ -11,7 +14,7 @@ body {
 	text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* body::before {
+body::before {
 	content: "";
 	position: absolute;
 	z-index: 1;
@@ -19,7 +22,7 @@ body {
 	bottom: 0;
 	width: 100%;
 	height: 100%;
-	opacity: 0.05;
+	opacity: 0.1;
 	background: repeating-radial-gradient(#000 0 0.0001%, #8a8888 0 0.0002%) 50% 0/2500px
 			2500px,
 		repeating-conic-gradient(#000 0 0.0001%, #8a8888 0 0.0002%) 50% 50%/2500px
@@ -32,11 +35,11 @@ body {
 	100% {
 		background-position: 50% 0, 50% 0%;
 	}
-} */
+}
 
-button {
+button:not(.hero-btn) {
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 	background: none;
 	border: 4px solid white;
 	outline: none;
@@ -48,18 +51,19 @@ button {
 	max-width: 200px;
 	min-width: 200px;
 }
-button span {
+button:not(.hero-btn) span {
 	color: white;
 }
 
-button::before {
+button:not(.hero-btn)::before {
 	position: absolute;
 	z-index: -1;
 	content: "";
 	top: 0;
 	left: 0;
 	width: 60%;
-	height: 100%;
+	top: -1px;
+	height: 105%;
 	left: -15px;
 	background: white;
 	transform: skew(15deg);
@@ -77,7 +81,20 @@ button:hover span {
 }
 
 #top {
-	position: relative;
-	z-index: 6000;
 	height: 100vh;
+}
+h2 {
+	text-transform: uppercase;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+@media (max-width: 1024px) {
+	#top {
+		display: none;
+	}
 }

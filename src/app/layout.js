@@ -12,10 +12,11 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="fr">
 			<body className={rajdhani.className}>
+				<Header />
 				<div id="top">
-					<Header />
 					<Hero />
 				</div>
+
 				{children}
 				{/* Footer */}
 			</body>

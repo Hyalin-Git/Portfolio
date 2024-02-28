@@ -1,12 +1,12 @@
 .container {
 	width: 100%;
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
-	flex-wrap: wrap;
+	gap: 20px;
 }
+
 .content {
-	min-width: 600px;
+	width: 100%;
 }
 .title h2 {
 	font-size: 3rem;
@@ -23,7 +23,7 @@
 .form {
 	position: relative;
 	z-index: 10;
-	min-width: 600px;
+	width: 100%;
 }
 
 .form__input input {
@@ -55,6 +55,7 @@
 	padding: 10px;
 	box-sizing: border-box;
 	width: 100%;
+	resize: none;
 	transition: 150ms all linear;
 }
 
@@ -65,4 +66,18 @@
 .buttons button {
 	max-width: inherit;
 	width: 100%;
+}
+
+/* MEDIA QUERIES  */
+
+@media (max-width: 1590px) {
+	.title h2 {
+		font-size: 2.5rem;
+	}
+}
+
+@media (max-width: 1120px) {
+	.container {
+		flex-wrap: wrap;
+	}
 }

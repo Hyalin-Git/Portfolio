@@ -15,9 +15,11 @@ export default function Home() {
 					<div className={styles.about}>
 						<About />
 					</div>
+					<div className={styles.underline}></div>
 					<div className={styles.projects}>
 						<Projects />
 					</div>
+					<div className={styles.underline}></div>
 					<div className={styles.contact}>
 						<Contact />
 					</div>

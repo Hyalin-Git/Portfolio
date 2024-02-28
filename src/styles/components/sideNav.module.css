@@ -3,7 +3,7 @@
 	top: 0;
 	width: 280px;
 	height: 100%;
-	background-color: #282828;
+	background-color: color-mix(in srgb, #282828 50%, black);
 	border-right: 8px solid white;
 	text-align: center;
 }

@@ -6,10 +6,11 @@ import styles from "@/styles/components/projects.module.css";
 
 export default function Projects() {
 	const projects = data;
+	console.log(projects);
 
 	return (
 		<div className={styles.container}>
-			{projects.map((project) => {
+			{projects.map((project, idx) => {
 				return <Project project={project} key={project.id} />;
 			})}
 		</div>
