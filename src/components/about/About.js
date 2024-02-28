@@ -41,7 +41,9 @@ export default function About() {
 							height={400}
 						/>
 						<br />
-						<button>Télécharger mon cv</button>
+						<button>
+							Télécharge<span>r mon cv</span>
+						</button>
 					</div>
 				</div>
 			</div>

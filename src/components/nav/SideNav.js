@@ -18,28 +18,36 @@ export default function SideNav() {
 				</div>
 				<div className={styles.social}>
 					<div>
-						<Image
-							src="./images/svg/linkedIn.svg"
-							alt="yas"
-							width={40}
-							height={40}
-						/>
+						<a
+							href="https://www.linkedin.com/in/n-t-dev-b72892265/"
+							target="_bank">
+							<Image
+								src="./images/svg/linkedIn.svg"
+								alt="yas"
+								width={40}
+								height={40}
+							/>
+						</a>
 					</div>
 					<div>
-						<Image
-							src="./images/svg/twitter.svg"
-							alt="yas"
-							width={40}
-							height={40}
-						/>
+						<a href="https://twitter.com/Hyalin_dev" target="_bank">
+							<Image
+								src="./images/svg/twitter.svg"
+								alt="yas"
+								width={40}
+								height={40}
+							/>
+						</a>
 					</div>
 					<div>
-						<Image
-							src="./images/svg/github.svg"
-							alt="yas"
-							width={40}
-							height={40}
-						/>
+						<a href="https://github.com/Hyalin-Git" target="_bank">
+							<Image
+								src="./images/svg/github.svg"
+								alt="yas"
+								width={40}
+								height={40}
+							/>
+						</a>
 					</div>
 				</div>
 			</nav>

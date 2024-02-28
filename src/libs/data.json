@@ -47,8 +47,8 @@
 		],
 		"images": [
 			"images/kasa/KasaForeground.png",
-			"./images/kasa/KasaBackgroundLeft.png",
-			"./images/kasa/KasaBackgroundRight.png"
+			"images/kasa/KasaBackgroundLeft.png",
+			"images/kasa/KasaBackgroundRight.png"
 		]
 	},
 	{

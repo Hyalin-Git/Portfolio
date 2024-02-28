@@ -30,7 +30,9 @@ export default function Project({ project }) {
 					<button className={rajdhani.className}>
 						Voir le <span>projet</span>
 					</button>
-					<button className={rajdhani.className}>Voir le code</button>
+					<button className={rajdhani.className}>
+						Voir le <span>code</span>
+					</button>
 				</div>
 			</div>
 			<div className={styles.card__right}>
