@@ -211,9 +211,34 @@
 	.card:nth-child(even) .card__header {
 		justify-content: center;
 	}
-
+	/* .card:nth-child(even) .card__images .backgrounds {
+		flex-direction: row-reverse;
+	} */
 	.buttons,
 	.card:nth-child(even) .buttons {
 		justify-content: center;
+	}
+}
+
+@media (max-width: 780px) {
+	.card__images .backgrounds {
+		display: none;
+	}
+	.card__no__image {
+		min-height: 300px;
+	}
+}
+
+@media (max-width: 480px) {
+	.buttons button {
+		font-size: 1.3rem;
+		min-width: 150px;
+	}
+}
+
+@media (max-width: 380px) {
+	.buttons button {
+		font-size: 1rem;
+		min-width: 120px;
 	}
 }
