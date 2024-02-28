@@ -237,11 +237,14 @@
 }
 
 @media (max-width: 450px) {
+	.title {
+		font-size: 1.2rem;
+	}
 	.skills h2 {
-		font-size: 1.8rem;
+		font-size: 1.5rem;
 	}
 
 	.experience h2 {
-		font-size: 1.8rem;
+		font-size: 1.5rem;
 	}
 }

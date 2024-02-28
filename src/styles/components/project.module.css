@@ -230,6 +230,12 @@
 }
 
 @media (max-width: 480px) {
+	.card__no__image {
+		min-height: 200px;
+	}
+	.card__header {
+		font-size: 1rem;
+	}
 	.buttons button {
 		font-size: 1.3rem;
 		min-width: 150px;
