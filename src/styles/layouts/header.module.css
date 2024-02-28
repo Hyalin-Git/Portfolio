@@ -14,7 +14,7 @@
 		z-index: 200;
 	}
 	.nav {
-		background-color: #282828;
+		background-color: color-mix(in srgb, #282828 50%, black);
 		height: 60px;
 		border-bottom: 8px solid white;
 		padding: 0 40px 0 40px;

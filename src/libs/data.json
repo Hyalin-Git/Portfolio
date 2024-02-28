@@ -3,7 +3,7 @@
 		"id": 1,
 		"title": "Un vrai couteau suisse à porté de main,",
 		"name": "Arya",
-		"description": " Lorem ipsum dolor sit amet consectetur adipiscing elit. Phasellus lacinia arcu lorem, vel ultricies libero vehicula at. Suspendisse mattis in est id fringilla. Pellentesque tristique urna sit amet tellus facilisis iaculis. Curabitur placerat diam vel nunc lacinia auctor. Nullam nec mauris vitae orci convallis sagittis at a quam. Vivamus id risus vitae erat feugiat iaculis eget id sapien. Integer sollicitudin gravida lacus a efficitur.",
+		"description": "Arya est un projet ambitieux, visant à facilité la recherche d'emploi, le projet étant toujours en cours de dévéloppement, je n'en dirais pas plus pour le moment.",
 		"status": "progress",
 		"skills": [
 			"./images/svg/next-js.svg",
@@ -15,8 +15,8 @@
 		],
 		"images": [
 			"images/arya/arya-foreground.png",
-			"./images/oricam/OricamBackgroundLeft.JPG",
-			"./images/oricam/OricamBackgroundRight.JPG"
+			"images/arya/arya-background-left.png",
+			"images/arya/arya-background-right.png"
 		]
 	},
 	{
