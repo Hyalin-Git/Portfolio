@@ -2,7 +2,11 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 220px;
+	gap: 120px;
 }
 
-
+@media (max-width: 1300px) {
+	.container {
+		gap: 40px;
+	}
+}

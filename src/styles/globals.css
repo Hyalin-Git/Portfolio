@@ -5,8 +5,12 @@
 html::-webkit-scrollbar {
 	display: none;
 }
+html {
+	scroll-behavior: smooth;
+}
 body {
 	position: relative;
+
 	margin: 0;
 	padding: 0;
 	background-color: #282828;
@@ -95,6 +99,12 @@ ul {
 
 @media (max-width: 1024px) {
 	#top {
+		display: none;
+	}
+}
+
+@media (max-width: 600px) {
+	body::before {
 		display: none;
 	}
 }

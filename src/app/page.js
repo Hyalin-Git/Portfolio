@@ -12,15 +12,15 @@ export default function Home() {
 					<SideNav />
 				</aside>
 				<div className={styles.content}>
-					<div className={styles.about}>
+					<div className={styles.about} id="about">
 						<About />
 					</div>
 					<div className={styles.underline}></div>
-					<div className={styles.projects}>
+					<div className={styles.projects} id="projects">
 						<Projects />
 					</div>
 					<div className={styles.underline}></div>
-					<div className={styles.contact}>
+					<div className={styles.contact} id="contact">
 						<Contact />
 					</div>
 				</div>

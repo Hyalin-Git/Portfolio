@@ -79,7 +79,7 @@
 	margin-left: 40px;
 	display: flex;
 	align-items: center;
-	height: 800px;
+	height: 90vh;
 	font-size: 2.5rem;
 	text-transform: uppercase;
 	padding: 0 40px 0 40px;
@@ -109,13 +109,19 @@
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
 	box-shadow: 8px -8px 0 var(--primary-color);
-	transition: 50ms all linear;
+	transition: 20ms all linear;
 }
 
 .buttons button:hover {
 	transition: 50ms all linear;
 	scale: 1.05;
 	cursor: pointer;
+}
+
+.buttons button:active {
+	translate: 2px -2px;
+	transition: 20ms all linear;
+	box-shadow: 4px -4px 0 var(--primary-color);
 }
 
 .content strong {
@@ -256,5 +262,13 @@
 	}
 	100% {
 		clip-path: polygon(0% 0%, 66.666% 0%, 66.666% 0%, 0% 0%, 0% 100%);
+	}
+}
+
+/* MEDIA QUERIES  */
+
+@media (max-width: 1320px) {
+	.index div {
+		width: 160px;
 	}
 }

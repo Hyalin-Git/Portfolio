@@ -45,13 +45,13 @@ export default function Project({ project }) {
 								quality={100}
 							/>
 						</div>
-						{/* <div className={styles.backgrounds}>
+						<div className={styles.backgrounds}>
 							<div>
 								<Image
 									className={styles.background__left}
 									src={`/${project.images[1]}`}
 									alt="back"
-									width={220}
+									width={620}
 									height={220}
 									quality={100}
 								/>
@@ -61,12 +61,12 @@ export default function Project({ project }) {
 									className={styles.background__right}
 									src={`/${project.images[2]}`}
 									alt="back"
-									width={420}
+									width={620}
 									height={220}
 									quality={100}
 								/>
 							</div>
-						</div> */}
+						</div>
 					</div>
 				) : (
 					<div className={styles.card__no__image}>

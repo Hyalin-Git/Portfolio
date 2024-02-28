@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Markdown from "markdown-to-jsx";
 import styles from "../../styles/components/hero.module.css";
 import clsx from "clsx";
@@ -21,18 +22,21 @@ export default function Hero() {
 			id: 2,
 			text: "#En apprendre plus, sur moi.",
 			btn: "à propos de moi",
+			link: "#about",
 			image: "/images/second_banner.png",
 		},
 		{
 			id: 3,
 			text: "#Un voyage à travers la créativité.",
 			btn: "Voir mes projets",
+			link: "#projects",
 			image: "/images/third_banner.png",
 		},
 		{
 			id: 4,
 			text: "#Toc à ma porte numérique.",
 			btn: "Me contacter",
+			link: "#contact",
 			image: "/images/fourth_banner.png",
 		},
 	];
@@ -80,9 +84,11 @@ export default function Hero() {
 						</div>
 						{banners[index].btn && (
 							<div className={styles.buttons}>
-								<button className={clsx(rajdhani.className, "hero-btn")}>
-									{banners[index].btn}
-								</button>
+								<Link href={`${banners[index].link}`}>
+									<button className={clsx("hero-btn")}>
+										{banners[index].btn}
+									</button>
+								</Link>
 							</div>
 						)}
 					</div>
@@ -139,7 +145,7 @@ export default function Hero() {
 						</div>
 						{banners[checkIndex].btn && (
 							<div className={styles.buttons}>
-								<button className={clsx(rajdhani.className, "hero-btn")}>
+								<button className={clsx("hero-btn")}>
 									{banners[checkIndex]?.btn}
 								</button>
 							</div>
