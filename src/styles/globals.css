@@ -8,6 +8,9 @@ html::-webkit-scrollbar {
 html {
 	scroll-behavior: smooth;
 }
+body:has(.open) {
+	overflow: hidden;
+}
 body {
 	position: relative;
 
@@ -84,7 +87,7 @@ button:hover span {
 	transition: 0ms all linear 50ms;
 }
 
-#top {
+#home {
 	height: 100vh;
 }
 h2 {
@@ -96,9 +99,17 @@ ul {
 	margin: 0;
 	padding: 0;
 }
-
+a {
+	text-decoration: none;
+	color: inherit;
+}
+.active {
+	font-weight: 600;
+	color: var(--primary-color);
+	transition: all 150ms linear;
+}
 @media (max-width: 1024px) {
-	#top {
+	#home {
 		display: none;
 	}
 }

@@ -1,4 +1,4 @@
-import { rajdhani } from "@/libs/utils";
+import { rajdhani } from "@/libs/fonts";
 import "../styles/globals.css";
 import Hero from "@/components/hero/Hero";
 import Header from "@/components/header/Header";
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
 		<html lang="fr">
 			<body className={rajdhani.className}>
 				<Header />
-				<div id="top">
+				<div id="home">
 					<Hero />
 				</div>
 

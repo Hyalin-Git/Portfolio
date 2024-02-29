@@ -1,6 +1,14 @@
+"use client";
+import { observeLinks } from "@/libs/utils";
 import styles from "@/styles/components/sideNav.module.css";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useMemo } from "react";
+
 export default function SideNav() {
+	useEffect(() => {
+		observeLinks();
+	}, []);
 	return (
 		<div className={styles.container}>
 			<nav>
@@ -8,12 +16,25 @@ export default function SideNav() {
 					<h2>Hyalin</h2>
 					<h2>Hyalin</h2>
 				</div>
-				<div className={styles.links}>
+				<div className={styles.links} id="nav-links">
 					<ul>
-						<li>Accueil</li>
-						<li>À propos de moi</li>
-						<li>Mes projets</li>
-						<li>Contact</li>
+						<Link href="#">
+							<li
+								onClick={() => {
+									window.scrollTo(0, 0);
+								}}>
+								Accueil
+							</li>
+						</Link>
+						<Link href="#about">
+							<li>À propos de moi</li>
+						</Link>
+						<Link href="#projects">
+							<li>Mes projets</li>
+						</Link>
+						<Link href="#contact">
+							<li>Contact</li>
+						</Link>
 					</ul>
 				</div>
 				<div className={styles.social}>

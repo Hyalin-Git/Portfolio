@@ -59,6 +59,11 @@
 	font-size: 1.5rem;
 }
 
+.links li:hover {
+	font-weight: 600;
+	cursor: pointer;
+}
+
 /* SOCIAL  */
 
 .social {

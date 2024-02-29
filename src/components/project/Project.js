@@ -1,5 +1,5 @@
 "use client";
-import { rajdhani } from "@/libs/utils";
+import { rajdhani } from "@/libs/fonts";
 import Image from "next/image";
 import styles from "@/styles/components/project.module.css";
 export default function Project({ project }) {
