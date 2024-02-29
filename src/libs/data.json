@@ -23,7 +23,7 @@
 		"id": 2,
 		"title": "Envie de stratégie ?",
 		"name": "Fate Alignement",
-		"description": "Fate Alignement et un projet personnel qui me tient à coeur, sans en dire trop pour le moment, Fate alignement sera un jeu, tour par tour stratégique disponible sur tous les navigateurs internet et à terme pourquoi pas en faire une application téléphone.",
+		"description": "Fate Alignment est un projet personnel qui me tient à cœur. Sans trop dévoiler pour l'instant, il s'agit d'un jeu de stratégie au tour par tour. L'objectif est de le rendre disponible sur tous les navigateurs internet, et éventuellement de le développer en une application pour téléphone.",
 		"status": "progress",
 		"skills": [
 			"./images/svg/next-js.svg",
@@ -38,7 +38,7 @@
 		"id": 3,
 		"title": "Vous avez besoin de changer d'air ?",
 		"name": "Kasa",
-		"description": " Kasa est un projet réalisé au cours de ma formation, c'est un site de réservation de logement en ligne, purement fictif. Le but de ce projet était d'améliorer mes compétences sous React, la réutilisation des composants, l'utilisation des hooks etc... Les données sont stockés côté front-end, donc vous pouvez vister le site sans craintes",
+		"description": "Kasa est un projet réalisé lors de ma formation. Il s'agit d'un site fictif de réservation de logements en ligne. L'objectif principal de ce projet était d'améliorer mes compétences en React, notamment en ce qui concerne la réutilisation des composants et l'utilisation des hooks. Les données sont stockées côté front-end, donc vous pouvez visiter le site sans crainte.",
 		"status": "done",
 		"skills": [
 			"./images/svg/react.svg",
@@ -55,7 +55,7 @@
 		"id": 4,
 		"title": "Vous venez de dire Peter Parker ?",
 		"name": "Oricam",
-		"description": "Oricam est un projet réalisé au cours de ma formation, c'est un site de e-commerce qui a pour but la vente d'appareil photo, celui-ci est purement fictif. Le but visé était de consolider mes compétences en Javascript en récupérant et en manipulant des données stockés dans le back-end afin de les afficher côté front-end. Le back-end n'étant hébergé que en local, si vous voulez afficher les produits il vous faudra télécharger le back-end et le lancer en local avec 'npm start'.",
+		"description": "Oricam est un projet réalisé pendant ma formation. Il s'agit d'un site de e-commerce fictif spécialisé dans la vente d'appareils photo. L'objectif était de renforcer mes compétences en JavaScript en récupérant et en manipulant des données stockées dans le back-end pour les afficher côté front-end. Malheureusement, je n'ai plus accès au back-end, donc les appareils photo ne seront pas visibles sur le site. Cependant, vous pouvez toujours le visiter.",
 		"status": "done",
 		"skills": [
 			"./images/svg/html.svg",
@@ -63,16 +63,16 @@
 			"./images/svg/javascript.svg"
 		],
 		"images": [
-			"images/oricam/OricamForeground.JPG",
-			"images/oricam/OricamBackgroundLeft.JPG",
-			"images/oricam/OricamBackgroundRight.JPG"
+			"images/oricam/oricam-foreground.webp",
+			"images/oricam/oricam-background-left.webp",
+			"images/oricam/oricam-background-right.webp"
 		]
 	},
 	{
 		"id": 5,
 		"title": "Vous faire des amis au travail",
 		"name": "Groupomania",
-		"description": " Lorem ipsum dolor sit amet consectetur adipiscing elit. Phasellus lacinia arcu lorem, vel ultricies libero vehicula at. Suspendisse mattis in est id fringilla. Pellentesque tristique urna sit amet tellus facilisis iaculis. Curabitur placerat diam vel nunc lacinia auctor. Nullam nec mauris vitae orci convallis sagittis at a quam. Vivamus id risus vitae erat feugiat iaculis eget id sapien. Integer sollicitudin gravida lacus a efficitur.",
+		"description": "Groupomania, oui, je le concède, n'a pas un design des plus attrayants. Cependant, il a été conçu dans le cadre d'un projet orienté backend pendant ma formation pour approfondir mes compétences avec Node.js et MongoDB. En ce qui concerne le front-end, nous avions des contraintes, donc j'ai opté pour une approche simple, j'ai priorisé le développement back-end. Groupomania est un réseau social fictif pour 'Groupomania', permettant la création de comptes, la publication de messages, les commentaires, etc. Pour en savoir plus et visiter le site, consultez mon GitHub.",
 		"status": "done",
 		"skills": [
 			"./images/svg/react.svg",
@@ -83,9 +83,9 @@
 			"./images/svg/mongodb.svg"
 		],
 		"images": [
-			"images/oricam/OricamForeground.JPG",
-			"images/oricam/OricamBackgroundLeft.JPG",
-			"images/oricam/OricamBackgroundRight.JPG"
+			"images/groupomania/groupomania-foreground.webp",
+			"images/groupomania/groupomania-background-left.webp",
+			"images/groupomania/groupomania-background-right.webp"
 		]
 	}
 ]

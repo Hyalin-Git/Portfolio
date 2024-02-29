@@ -162,7 +162,6 @@ export default function Hero() {
 					alt="background"
 					style={{
 						objectFit: "cover",
-						backgroundPosition: "center",
 					}}
 				/>
 				<div className={styles.content}>

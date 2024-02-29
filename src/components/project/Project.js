@@ -46,9 +46,15 @@ export default function Project({ project }) {
 					</span>
 				</div>
 				<div className={styles.card__skills}>
-					{project.skills.map((skill) => {
+					{project.skills.map((skill, idx) => {
 						return (
-							<Image src={skill} alt="compétence" width={25} height={25} />
+							<Image
+								src={skill}
+								alt="compétence"
+								width={25}
+								height={25}
+								key={idx}
+							/>
 						);
 					})}
 				</div>
