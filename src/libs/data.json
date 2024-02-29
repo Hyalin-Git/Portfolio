@@ -38,7 +38,7 @@
 		"id": 3,
 		"title": "Vous avez besoin de changer d'air ?",
 		"name": "Kasa",
-		"description": " Kasa is a really good compagny adipiscing elit. Phasellus lacinia arcu lorem, vel ultricies libero vehicula at. Suspendisse mattis in est id fringilla. Pellentesque tristique urna sit amet tellus facilisis iaculis. Curabitur placerat diam vel nunc lacinia auctor. Nullam nec mauris vitae orci convallis sagittis at a quam. Vivamus id risus vitae erat feugiat iaculis eget id sapien. Integer sollicitudin gravida lacus a efficitur.",
+		"description": " Kasa est un projet réalisé au cours de ma formation, c'est un site de réservation de logement en ligne, purement fictif. Le but de ce projet était d'améliorer mes compétences sous React, la réutilisation des composants, l'utilisation des hooks etc... Les données sont stockés côté front-end, donc vous pouvez vister le site sans craintes",
 		"status": "done",
 		"skills": [
 			"./images/svg/react.svg",
@@ -46,21 +46,41 @@
 			"./images/svg/sass.svg"
 		],
 		"images": [
-			"images/kasa/KasaForeground.png",
-			"images/kasa/KasaBackgroundLeft.png",
-			"images/kasa/KasaBackgroundRight.png"
+			"images/kasa/kasa-foreground.webp",
+			"images/kasa/kasa-background-left.webp",
+			"images/kasa/kasa-background-right.webp"
 		]
 	},
 	{
 		"id": 4,
 		"title": "Vous venez de dire Peter Parker ?",
 		"name": "Oricam",
-		"description": " Lorem ipsum dolor sit amet consectetur adipiscing elit. Phasellus lacinia arcu lorem, vel ultricies libero vehicula at. Suspendisse mattis in est id fringilla. Pellentesque tristique urna sit amet tellus facilisis iaculis. Curabitur placerat diam vel nunc lacinia auctor. Nullam nec mauris vitae orci convallis sagittis at a quam. Vivamus id risus vitae erat feugiat iaculis eget id sapien. Integer sollicitudin gravida lacus a efficitur.",
+		"description": "Oricam est un projet réalisé au cours de ma formation, c'est un site de e-commerce qui a pour but la vente d'appareil photo, celui-ci est purement fictif. Le but visé était de consolider mes compétences en Javascript en récupérant et en manipulant des données stockés dans le back-end afin de les afficher côté front-end. Le back-end n'étant hébergé que en local, si vous voulez afficher les produits il vous faudra télécharger le back-end et le lancer en local avec 'npm start'.",
 		"status": "done",
 		"skills": [
 			"./images/svg/html.svg",
 			"./images/svg/bootstrap.svg",
 			"./images/svg/javascript.svg"
+		],
+		"images": [
+			"images/oricam/OricamForeground.JPG",
+			"images/oricam/OricamBackgroundLeft.JPG",
+			"images/oricam/OricamBackgroundRight.JPG"
+		]
+	},
+	{
+		"id": 5,
+		"title": "Vous faire des amis au travail",
+		"name": "Groupomania",
+		"description": " Lorem ipsum dolor sit amet consectetur adipiscing elit. Phasellus lacinia arcu lorem, vel ultricies libero vehicula at. Suspendisse mattis in est id fringilla. Pellentesque tristique urna sit amet tellus facilisis iaculis. Curabitur placerat diam vel nunc lacinia auctor. Nullam nec mauris vitae orci convallis sagittis at a quam. Vivamus id risus vitae erat feugiat iaculis eget id sapien. Integer sollicitudin gravida lacus a efficitur.",
+		"status": "done",
+		"skills": [
+			"./images/svg/react.svg",
+			"./images/svg/sass.svg",
+			"./images/svg/javascript.svg",
+			"./images/svg/nodeJs.svg",
+			"./images/svg/expressJs.svg",
+			"./images/svg/mongodb.svg"
 		],
 		"images": [
 			"images/oricam/OricamForeground.JPG",

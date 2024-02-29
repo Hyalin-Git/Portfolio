@@ -1,8 +1,24 @@
 .main {
 	display: flex;
-	margin-top: -94px;
+	margin-top: -103px;
 }
 
+.main::before {
+	content: "";
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	opacity: 0.1;
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, 0) calc(50% - 1px),
+		rgba(192, 192, 192, 1) calc(50%),
+		rgba(0, 0, 0, 0) calc(50% + 1px)
+	);
+	background-size: calc((100% - 5 * 5px) / 2 + 9px) 100%;
+}
 @media (max-width: 1024px) {
 	.main {
 		margin-top: 0;
