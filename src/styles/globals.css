@@ -107,6 +107,7 @@ a {
 	font-weight: 600;
 	color: var(--primary-color);
 	transition: all 150ms linear;
+	scale: 1.05;
 }
 @media (max-width: 1024px) {
 	#home {

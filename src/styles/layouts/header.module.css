@@ -116,9 +116,10 @@
 	text-align: right;
 } */
 .social {
-	animation: yas 450ms forwards;
 	position: absolute;
 	bottom: 20px;
+	margin-bottom: 20px;
+	animation: yas 450ms forwards;
 	display: flex;
 	gap: 20px;
 	filter: invert(1);
