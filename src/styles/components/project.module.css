@@ -256,6 +256,12 @@
 }
 
 @media (max-width: 1300px) {
+	.card__content,
+	.card:nth-child(even) .card__content {
+		display: flex;
+		text-align: center;
+		align-items: center;
+	}
 	.card,
 	.card:nth-child(even) {
 		flex-direction: column-reverse;
