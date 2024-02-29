@@ -118,7 +118,7 @@
 .social {
 	position: absolute;
 	bottom: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	animation: yas 450ms forwards;
 	display: flex;
 	gap: 20px;
