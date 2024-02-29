@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "@/styles/layouts/header.module.css";
 import clsx from "clsx";
 import { observeLinks } from "@/libs/utils";
-
+import Link from "next/link";
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -42,10 +42,38 @@ export default function Header() {
 					<div className={clsx(styles.nav__burger, "open")}>
 						<div id="nav-links">
 							<ul>
-								<li>Accueil</li>
-								<li>À propos de moi</li>
-								<li>Mes projets</li>
-								<li>Contact</li>
+								<Link href="#home">
+									<li
+										onClick={() => {
+											setIsOpen(!isOpen);
+										}}>
+										Accueil
+									</li>
+								</Link>
+								<Link href="#about">
+									<li
+										onClick={() => {
+											setIsOpen(!isOpen);
+										}}>
+										À propos de moi
+									</li>
+								</Link>
+								<Link href="#projects">
+									<li
+										onClick={() => {
+											setIsOpen(!isOpen);
+										}}>
+										Mes projets
+									</li>
+								</Link>
+								<Link href="#contact">
+									<li
+										onClick={() => {
+											setIsOpen(!isOpen);
+										}}>
+										Contact
+									</li>
+								</Link>
 							</ul>
 						</div>
 						<div className={styles.social}>
