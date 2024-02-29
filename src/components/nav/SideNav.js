@@ -18,9 +18,10 @@ export default function SideNav() {
 				</div>
 				<div className={styles.links} id="nav-links">
 					<ul>
-						<Link href="#">
+						<Link href="#home">
 							<li
-								onClick={() => {
+								onClick={(e) => {
+									e.preventDefault();
 									window.scrollTo(0, 0);
 								}}>
 								Accueil

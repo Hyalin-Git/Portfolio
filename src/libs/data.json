@@ -14,9 +14,9 @@
 			"./images/svg/mongodb.svg"
 		],
 		"images": [
-			"images/arya/arya-foreground.png",
-			"images/arya/arya-background-left.png",
-			"images/arya/arya-background-right.png"
+			"images/arya/arya-foreground.webp",
+			"images/arya/arya-background-left.webp",
+			"images/arya/arya-background-right.webp"
 		]
 	},
 	{

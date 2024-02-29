@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "markdown-to-jsx";
@@ -16,28 +16,28 @@ export default function Hero() {
 		{
 			id: 1,
 			text: `#Développeur web, **full-stack** **full-stack**`,
-			image: "/images/first_banner.png",
+			image: "/images/first-banner.webp",
 		},
 		{
 			id: 2,
 			text: "#En apprendre plus, sur moi.",
 			btn: "à propos de moi",
 			link: "#about",
-			image: "/images/second_banner.png",
+			image: "/images/second-banner.webp",
 		},
 		{
 			id: 3,
 			text: "#Un voyage à travers la créativité.",
 			btn: "Voir mes projets",
 			link: "#projects",
-			image: "/images/third_banner.png",
+			image: "/images/third-banner.webp",
 		},
 		{
 			id: 4,
 			text: "#Toc à ma porte numérique.",
 			btn: "Me contacter",
 			link: "#contact",
-			image: "/images/fourth_banner.png",
+			image: "/images/fourth-banner.webp",
 		},
 	];
 
@@ -61,9 +61,6 @@ export default function Hero() {
 	}
 
 	useEffect(() => {
-		leftBackground.current.style.backgroundImage = `url(${banners[index].image})`;
-		rightBackground.current.style.backgroundImage = `url(${banners[checkIndex].image})`;
-
 		// Hydrate index color
 		const indexTracker = document.getElementsByClassName("index-tracker");
 
@@ -76,6 +73,17 @@ export default function Hero() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.background} ref={leftBackground}>
+				<Image
+					src={banners[index]?.image}
+					fill
+					quality={100}
+					sizes="100vw"
+					priority
+					style={{
+						objectFit: "cover",
+					}}
+					alt="foreground"
+				/>
 				<div className={styles.content}>
 					{/* title */}
 					<div>
@@ -138,6 +146,17 @@ export default function Hero() {
 				className={styles.background}
 				ref={rightBackground}
 				onClick={swapBanners}>
+				<Image
+					src={banners[checkIndex]?.image}
+					fill
+					quality={100}
+					sizes="100vw"
+					alt="background"
+					style={{
+						objectFit: "cover",
+						backgroundPosition: "center",
+					}}
+				/>
 				<div className={styles.content}>
 					<div>
 						<div className={styles.title}>
