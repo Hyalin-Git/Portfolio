@@ -109,11 +109,6 @@ a {
 	transition: all 150ms linear;
 	scale: 1.05;
 }
-/* @media (max-width: 1024px) {
-	#home {
-		display: none;
-	}
-} */
 
 @media (max-width: 600px) {
 	body::before {
