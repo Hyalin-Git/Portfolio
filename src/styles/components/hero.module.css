@@ -182,6 +182,12 @@
 	gap: 20px;
 	display: flex;
 	filter: invert(1);
+	transition: 100ms all linear;
+}
+.social img:hover {
+	cursor: pointer;
+	scale: 1.05;
+	transition: 100ms all linear;
 }
 
 .index {

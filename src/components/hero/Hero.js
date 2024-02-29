@@ -5,7 +5,7 @@ import Link from "next/link";
 import Markdown from "markdown-to-jsx";
 import styles from "../../styles/components/hero.module.css";
 import clsx from "clsx";
-import { rajdhani } from "@/libs/utils";
+import { rajdhani } from "@/libs/fonts";
 
 export default function Hero() {
 	const [index, setIndex] = useState(0);
@@ -93,7 +93,7 @@ export default function Hero() {
 						{banners[index].btn && (
 							<div className={styles.buttons}>
 								<Link href={`${banners[index].link}`}>
-									<button className={clsx("hero-btn")}>
+									<button className={clsx(rajdhani.className, "hero-btn")}>
 										{banners[index].btn}
 									</button>
 								</Link>
@@ -106,28 +106,36 @@ export default function Hero() {
 
 				<div className={styles.social}>
 					<div>
-						<Image
-							src="./images/svg/linkedIn.svg"
-							alt="yas"
-							width={40}
-							height={40}
-						/>
+						<a
+							href="https://www.linkedin.com/in/n-t-dev-b72892265/"
+							target="_bank">
+							<Image
+								src="./images/svg/linkedIn.svg"
+								alt="yas"
+								width={40}
+								height={40}
+							/>
+						</a>
 					</div>
 					<div>
-						<Image
-							src="./images/svg/twitter.svg"
-							alt="yas"
-							width={40}
-							height={40}
-						/>
+						<a href="https://twitter.com/Hyalin_dev" target="_bank">
+							<Image
+								src="./images/svg/twitter.svg"
+								alt="yas"
+								width={40}
+								height={40}
+							/>
+						</a>
 					</div>
 					<div>
-						<Image
-							src="./images/svg/github.svg"
-							alt="yas"
-							width={40}
-							height={40}
-						/>
+						<a href="https://github.com/Hyalin-Git" target="_bank">
+							<Image
+								src="./images/svg/github.svg"
+								alt="yas"
+								width={40}
+								height={40}
+							/>
+						</a>
 					</div>
 				</div>
 				{/* index  */}
@@ -164,7 +172,7 @@ export default function Hero() {
 						</div>
 						{banners[checkIndex].btn && (
 							<div className={styles.buttons}>
-								<button className={clsx("hero-btn")}>
+								<button className={clsx(rajdhani.className, "hero-btn")}>
 									{banners[checkIndex]?.btn}
 								</button>
 							</div>

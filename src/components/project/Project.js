@@ -2,9 +2,35 @@
 import { rajdhani } from "@/libs/fonts";
 import Image from "next/image";
 import styles from "@/styles/components/project.module.css";
+import { useEffect } from "react";
+import clsx from "clsx";
 export default function Project({ project }) {
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					entry.target.classList.toggle(
+						`${styles.isInView}`,
+						entry.isIntersecting
+					);
+				});
+			},
+			{
+				threshold: 0.7,
+			}
+		);
+		window.addEventListener("resize", () => {
+			if (window.innerWidth <= 780) {
+				return;
+			}
+		});
+		const cards = document.getElementsByClassName("cards");
+		for (const card of cards) {
+			observer.observe(card);
+		}
+	}, []);
 	return (
-		<article className={styles.card}>
+		<article className={clsx(styles.card, "cards")}>
 			<div className={styles.card__left}>
 				<div className={styles.card__header}>
 					<h2>
