@@ -115,3 +115,11 @@ a {
 		display: none;
 	}
 }
+
+.error {
+	border: 1px solid var(--primary-color) !important;
+	color: var(--primary-color) !important;
+}
+.error::placeholder {
+	color: var(--primary-color) !important;
+}

@@ -36,6 +36,14 @@
 	width: 100%;
 }
 
+.form input,
+.form textarea {
+	color: white;
+}
+.form input::placeholder,
+.form textarea::placeholder {
+	color: var(--secondary-color);
+}
 .form input:focus {
 	transition: 150ms all linear;
 	border: 1px solid white;
@@ -66,6 +74,15 @@
 .buttons button {
 	max-width: inherit;
 	width: 100%;
+}
+
+.modal {
+	position: fixed;
+	z-index: 6000;
+	background-color: red;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 /* MEDIA QUERIES  */

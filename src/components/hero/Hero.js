@@ -15,7 +15,7 @@ export default function Hero() {
 	const banners = [
 		{
 			id: 1,
-			text: `#Développeur web, **full-stack** **full-stack**`,
+			text: `#Développeur web **full-stack** **full-stack**`,
 			image: "/images/first-banner.webp",
 		},
 		{
