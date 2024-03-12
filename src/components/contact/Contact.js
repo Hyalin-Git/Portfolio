@@ -92,7 +92,16 @@ export default function Contact() {
 						)}
 					</div>
 					<div>
-						{isSuccess && <p>niquel</p>}
+						{isSuccess && (
+							<>
+								<h4>Merci de m'avoir contacté !</h4>
+
+								<p>
+									J'ai bien reçu votre mail, j'y répondrais dans les plus brefs
+									délais !
+								</p>
+							</>
+						)}
 						{isFailure && <p>pas niquel</p>}
 					</div>
 					<div>

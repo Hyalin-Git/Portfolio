@@ -22,14 +22,15 @@ export default function About() {
 					{/* des */}
 					<div className={styles.description}>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-							dapibus augue pellentesque felis pretium pharetra. Ut quis
-							tincidunt nisi, eget ornare mi. Aenean fermentum arcu faucibus,
-							bibendum neque vitae, pulvinar magna. Fusce ornare magna non
-							vulputate facilisis. Integer egestas iaculis eros sed porta.
-							tincidunt nisi, eget ornare mi. Aenean fermentum arcu faucibus,
-							bibendum neque vitae, pulvinar magna. Fusce ornare magna non
-							vulputate facilisis. Integer egestas iaculis eros sed porta.
+							Nicolas, jeune développeur web de 23 ans, d'abord diplômé du BAC
+							Pro Commerce, je me suis finalement orienté vers le déveleppement
+							web et validé une formation d'état de niveau BAC +2. J'ai de suite
+							été pris de passion pour le développement web, j'adore la
+							créativité et la liberté que dégage cette profession. Aujourd'hui
+							où j'en suis ? Je continue d'apprendre par moi-même, de progresser
+							en créant des projets personnels afin de renforcer mes
+							connaissances sur les langages déjà maîtrisé et d'apprendre de
+							nouveaux langages.
 						</p>
 					</div>
 					{/* img  */}
