@@ -6,6 +6,7 @@ import Markdown from "markdown-to-jsx";
 import styles from "../../styles/components/hero.module.css";
 import clsx from "clsx";
 import { rajdhani } from "@/libs/fonts";
+import Unlocker from "./Unlocker";
 
 export default function Hero() {
 	const [index, setIndex] = useState(0);
@@ -101,7 +102,7 @@ export default function Hero() {
 						)}
 					</div>
 					{/* unlocker */}
-					<div></div>
+					{index === 0 && <Unlocker />}
 				</div>
 
 				<div className={styles.social}>

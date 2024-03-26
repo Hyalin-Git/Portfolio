@@ -20,7 +20,7 @@ export default function Contact() {
 			.sendForm(
 				`${process.env.NEXT_PUBLIC_EMAILJSTOKEN}`,
 				`${process.env.NEXT_PUBLIC_EMAILJSTEMPLATE}`,
-				form.current,
+				form?.current,
 				`${process.env.NEXT_PUBLIC_EMAILJSACCESS}`
 			)
 			.then((res) => {
@@ -35,6 +35,12 @@ export default function Contact() {
 			.catch((err) => {
 				document.getElementById("btn").classList.add(styles.error);
 			});
+	}
+
+	function closeModel(e) {
+		e.preventDefault();
+		setIsSuccess(false);
+		setIsFailure(false);
 	}
 	return (
 		<>
@@ -84,7 +90,7 @@ export default function Contact() {
 				</div>
 			</div>
 			{(isSuccess || isFailure) && (
-				<div className={styles.modal}>
+				<div data-modal={true} className={styles.modal}>
 					<div>
 						{isSuccess && <h3>Hello ! nicogamer64@gmail.com</h3>}
 						{isFailure && (
@@ -94,7 +100,7 @@ export default function Contact() {
 					<div>
 						{isSuccess && (
 							<>
-								<h4>Merci de m'avoir contacté !</h4>
+								<h4>Merci de m'avoir contacté</h4>
 
 								<p>
 									J'ai bien reçu votre mail, j'y répondrais dans les plus brefs
@@ -102,10 +108,19 @@ export default function Contact() {
 								</p>
 							</>
 						)}
-						{isFailure && <p>pas niquel</p>}
+						{isFailure && (
+							<>
+								<h4>Veuilez réessayer ultérieurement</h4>
+
+								<p>
+									Si le problème persiste, contactez-moi via les réseaux
+									sociaux.
+								</p>
+							</>
+						)}
 					</div>
 					<div>
-						<button>Parfait</button>
+						<button onClick={closeModel}>Fermer</button>
 					</div>
 				</div>
 			)}

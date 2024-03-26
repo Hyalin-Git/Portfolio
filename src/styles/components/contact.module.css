@@ -79,7 +79,7 @@
 .modal {
 	position: fixed;
 	z-index: 6000;
-	background-color: red;
+	background-color: black;
 	padding: 0px 20px 20px 20px;
 	text-align: center;
 	top: 50%;

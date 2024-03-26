@@ -11,6 +11,9 @@ html {
 body:has(.open) {
 	overflow: hidden;
 }
+body:has(div[data-modal="true"]) {
+	overflow: hidden;
+}
 body {
 	position: relative;
 
