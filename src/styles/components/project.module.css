@@ -188,7 +188,6 @@
 /* NO IMAGE  */
 .card__right:has(.card__no__image) {
 	border: 1px solid white;
-	margin-bottom: 80px;
 }
 .card__no__image {
 	padding-left: 20px;
@@ -270,7 +269,7 @@
 		flex-direction: column-reverse;
 		justify-content: center;
 		align-items: center;
-		gap: 0px;
+
 		text-align: center;
 	}
 
@@ -287,6 +286,9 @@
 	.buttons,
 	.card:nth-child(even) .buttons {
 		justify-content: center;
+	}
+	.card__right:has(.card__no__image) {
+		margin-bottom: -100px;
 	}
 }
 

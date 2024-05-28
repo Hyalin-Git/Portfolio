@@ -87,7 +87,7 @@ export default function Hero() {
 					}}
 					alt="foreground"
 				/>
-				<div className={styles.content}>
+				<div className={styles.content} data-unlocked={isUnlocked}>
 					{/* title */}
 					<div>
 						<div className={styles.title}>

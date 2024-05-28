@@ -75,12 +75,30 @@
 	max-width: inherit;
 	width: 100%;
 }
+.modal button {
+	color: black !important;
+}
+.modal button span {
+	color: white;
+	transition: 0ms all linear 50ms;
+}
+.modal button::before {
+	width: 66%;
+}
+.modal button:hover:before {
+	width: 120%;
+}
+.modal button:hover span {
+	color: black;
+	transition: 0ms all linear 50ms;
+}
 
 .modal {
 	position: fixed;
 	z-index: 6000;
 	background-color: black;
 	padding: 0px 20px 20px 20px;
+	border-radius: 2px;
 	text-align: center;
 	top: 50%;
 	left: 50%;

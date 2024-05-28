@@ -92,35 +92,28 @@ export default function Contact() {
 			{(isSuccess || isFailure) && (
 				<div data-modal={true} className={styles.modal}>
 					<div>
-						{isSuccess && <h3>Hello ! nicogamer64@gmail.com</h3>}
+						{isSuccess && <h3>Merci de m'avoir contacté</h3>}
 						{isFailure && (
 							<h3>Oops ! une erreur s'est produite de notre côté</h3>
 						)}
 					</div>
 					<div>
 						{isSuccess && (
-							<>
-								<h4>Merci de m'avoir contacté</h4>
-
-								<p>
-									J'ai bien reçu votre mail, j'y répondrais dans les plus brefs
-									délais !
-								</p>
-							</>
+							<p>
+								J'ai bien reçu votre mail, j'y répondrais dans les plus brefs
+								délais !
+							</p>
 						)}
 						{isFailure && (
-							<>
-								<h4>Veuilez réessayer ultérieurement</h4>
-
-								<p>
-									Si le problème persiste, contactez-moi via les réseaux
-									sociaux.
-								</p>
-							</>
+							<p>
+								Si le problème persiste, contactez-moi via les réseaux sociaux.
+							</p>
 						)}
 					</div>
 					<div>
-						<button onClick={closeModel}>Fermer</button>
+						<button onClick={closeModel}>
+							Ferm<span>er</span>
+						</button>
 					</div>
 				</div>
 			)}
