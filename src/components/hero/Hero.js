@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useContext, useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "markdown-to-jsx";
@@ -7,8 +7,10 @@ import styles from "../../styles/components/hero.module.css";
 import clsx from "clsx";
 import { rajdhani } from "@/libs/fonts";
 import Unlocker from "./Unlocker";
+import { UnlockedContext } from "@/context/UnlockedContext";
 
 export default function Hero() {
+	const { isUnlocked } = useContext(UnlockedContext);
 	const [index, setIndex] = useState(0);
 	const leftBackground = useRef(null);
 	const rightBackground = useRef(null);
@@ -102,7 +104,7 @@ export default function Hero() {
 						)}
 					</div>
 					{/* unlocker */}
-					{index === 0 && <Unlocker />}
+					{!isUnlocked && <Unlocker />}
 				</div>
 				<div className={styles.social}>
 					<div>
@@ -150,35 +152,37 @@ export default function Hero() {
 					})}
 				</div>
 			</div>
-			<div
-				className={styles.background}
-				ref={rightBackground}
-				onClick={swapBanners}>
-				<Image
-					src={banners[checkIndex]?.image}
-					fill
-					quality={100}
-					sizes="100vw"
-					alt="background"
-					style={{
-						objectFit: "cover",
-					}}
-				/>
-				<div className={styles.content}>
-					<div>
-						<div className={styles.title}>
-							<Markdown>{banners[checkIndex]?.text}</Markdown>
-						</div>
-						{banners[checkIndex].btn && (
-							<div className={styles.buttons}>
-								<button className={clsx(rajdhani.className, "hero-btn")}>
-									{banners[checkIndex]?.btn}
-								</button>
+			{isUnlocked && (
+				<div
+					className={styles.background}
+					ref={rightBackground}
+					onClick={swapBanners}>
+					<Image
+						src={banners[checkIndex]?.image}
+						fill
+						quality={100}
+						sizes="100vw"
+						alt="background"
+						style={{
+							objectFit: "cover",
+						}}
+					/>
+					<div className={styles.content}>
+						<div>
+							<div className={styles.title}>
+								<Markdown>{banners[checkIndex]?.text}</Markdown>
 							</div>
-						)}
+							{banners[checkIndex].btn && (
+								<div className={styles.buttons}>
+									<button className={clsx(rajdhani.className, "hero-btn")}>
+										{banners[checkIndex]?.btn}
+									</button>
+								</div>
+							)}
+						</div>
 					</div>
 				</div>
-			</div>
+			)}
 		</div>
 	);
 }

@@ -91,7 +91,7 @@ button:hover span {
 }
 
 #home {
-	height: 100vh;
+	height: 100svh;
 }
 h2 {
 	text-transform: uppercase;

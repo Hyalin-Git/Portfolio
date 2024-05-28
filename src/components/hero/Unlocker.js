@@ -1,8 +1,10 @@
+import { UnlockedContext } from "@/context/UnlockedContext";
 import styles from "@/styles/components/unlocker.module.css";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 export default function Unlocker() {
 	const reachCircleRef = useRef(null);
 	const circleContainerRef = useRef(null);
+	const { setIsUnlocked } = useContext(UnlockedContext);
 	let isDown;
 	function dragCircle(e) {
 		e.preventDefault();
@@ -47,7 +49,7 @@ export default function Unlocker() {
 
 				setTimeout(() => {
 					console.log("sheesh");
-					// setUnlocked(true);
+					setIsUnlocked(true);
 				}, 250);
 
 				return (rotateCircle.style.transform = `rotate(165deg)`);

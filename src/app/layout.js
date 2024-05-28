@@ -2,6 +2,7 @@ import { rajdhani } from "@/libs/fonts";
 import "../styles/globals.css";
 import Hero from "@/components/hero/Hero";
 import Header from "@/components/header/Header";
+import Provider from "./Provider";
 
 export const metadata = {
 	title: "Hyalin - Portfolio",
@@ -12,13 +13,14 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="fr">
 			<body className={rajdhani.className}>
-				<Header />
-				<div id="home">
-					<Hero />
-				</div>
-
-				{children}
-				{/* Footer */}
+				<Provider>
+					<Header />
+					<div id="home">
+						<Hero />
+					</div>
+					{children}
+					{/* Footer */}
+				</Provider>
 			</body>
 		</html>
 	);
