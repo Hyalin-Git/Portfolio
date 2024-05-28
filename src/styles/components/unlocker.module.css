@@ -141,3 +141,9 @@
 		opacity: 0;
 	}
 }
+
+@media (max-width: 680px) {
+	.container {
+		display: none !important;
+	}
+}

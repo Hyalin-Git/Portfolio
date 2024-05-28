@@ -1,6 +1,5 @@
 .main {
 	display: flex;
-	margin-top: -103px;
 }
 
 .main::before {

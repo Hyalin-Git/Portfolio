@@ -27,8 +27,8 @@
 		"status": "progress",
 		"skills": [
 			"./images/svg/next-js.svg",
+			"./images/svg/typescript.svg",
 			"./images/svg/css.svg",
-			"./images/svg/javascript.svg",
 			"./images/svg/nodeJs.svg",
 			"./images/svg/expressJs.svg",
 			"./images/svg/mongodb.svg"
@@ -49,7 +49,9 @@
 			"images/kasa/kasa-foreground.webp",
 			"images/kasa/kasa-background-left.webp",
 			"images/kasa/kasa-background-right.webp"
-		]
+		],
+		"code": "https://github.com/Hyalin-Git/Kasa",
+		"website": "https://hyalin-git.github.io/Kasa/"
 	},
 	{
 		"id": 4,
@@ -66,7 +68,9 @@
 			"images/oricam/oricam-foreground.webp",
 			"images/oricam/oricam-background-left.webp",
 			"images/oricam/oricam-background-right.webp"
-		]
+		],
+		"code": "https://github.com/Hyalin-Git/NicolasTombal_5_05042021",
+		"website": "https://hyalin-git.github.io/NicolasTombal_5_05042021/"
 	},
 	{
 		"id": 5,
@@ -86,6 +90,7 @@
 			"images/groupomania/groupomania-foreground.webp",
 			"images/groupomania/groupomania-background-left.webp",
 			"images/groupomania/groupomania-background-right.webp"
-		]
+		],
+		"code": "https://github.com/Hyalin-Git/SocialMedia-Groupomania"
 	}
 ]

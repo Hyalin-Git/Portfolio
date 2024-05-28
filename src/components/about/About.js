@@ -110,6 +110,14 @@ export default function About() {
 								</li>
 								<li>
 									<Image
+										src="./images/svg/typescript.svg"
+										alt="logo de compétence"
+										width={25}
+										height={25}
+									/>
+								</li>
+								<li>
+									<Image
 										src="./images/svg/next-js.svg"
 										alt="logo de compétence"
 										width={25}

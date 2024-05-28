@@ -90,8 +90,28 @@ button:hover span {
 	transition: 0ms all linear 50ms;
 }
 
+button[data-disabled="true"] {
+	/* display: none; */
+	border: 4px solid color-mix(in srgb, white, black 80%);
+	background-color: color-mix(in srgb, white, black 80%);
+	color: color-mix(in srgb, white, black 50%);
+}
+button[data-disabled="true"]::before {
+	background-color: color-mix(in srgb, white, black 80%);
+}
+button[data-disabled="true"] span {
+	color: color-mix(in srgb, white, black 50%);
+}
+button[data-disabled="true"]:hover {
+	cursor: default;
+}
+a:has(button[data-disabled="true"]) {
+	pointer-events: none;
+}
+
 #home {
-	height: 100svh;
+	/* height: 100svh; */
+	height: 88svh;
 }
 h2 {
 	text-transform: uppercase;

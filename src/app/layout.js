@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import Hero from "@/components/hero/Hero";
 import Header from "@/components/header/Header";
 import Provider from "./Provider";
+import Footer from "@/components/footer/Footer";
 
 export const metadata = {
 	title: "Hyalin - Portfolio",
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
 					</div>
 					{children}
 					{/* Footer */}
+					<Footer />
 				</Provider>
 			</body>
 		</html>

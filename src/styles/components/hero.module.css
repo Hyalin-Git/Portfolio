@@ -304,10 +304,10 @@
 
 @media (max-width: 1024px) {
 	.content {
+		background-color: red;
 		padding: 0;
 		justify-content: center;
 		min-width: none;
-		margin-left: inherit;
 	}
 	.title {
 		width: 100%;
@@ -318,7 +318,7 @@
 	.index {
 		display: none;
 	}
-	.background:last-child {
+	.background:nth-child(2) {
 		display: none;
 	}
 	.social {
@@ -332,6 +332,9 @@
 @media (max-width: 680px) {
 	.title {
 		font-size: 2rem;
+	}
+	.content {
+		margin-left: inherit;
 	}
 	.content strong:nth-child(1) {
 		margin-bottom: -78px;

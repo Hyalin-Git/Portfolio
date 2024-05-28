@@ -141,6 +141,7 @@ export default function Hero() {
 					</div>
 				</div>
 				{/* index  */}
+
 				<div className={styles.index}>
 					{banners.map((banner, idx) => {
 						return (

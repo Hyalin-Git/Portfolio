@@ -1,12 +1,14 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import styles from "@/styles/layouts/header.module.css";
 import clsx from "clsx";
 import { observeLinks } from "@/libs/utils";
 import Link from "next/link";
+import { UnlockedContext } from "@/context/UnlockedContext";
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
+	const { isUnlocked } = useContext(UnlockedContext);
 
 	function handleBurgerMenu(e) {
 		e.preventDefault();
@@ -32,11 +34,13 @@ export default function Header() {
 					<h1>Hyalin</h1>
 				</div>
 				{/* Burger menu  */}
-				<div onClick={handleBurgerMenu} className={styles.nav__burger__btn}>
-					<div></div>
-					<div></div>
-					<div></div>
-				</div>
+				{isUnlocked && (
+					<div onClick={handleBurgerMenu} className={styles.nav__burger__btn}>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				)}
 
 				{isOpen && (
 					<div className={clsx(styles.nav__burger, "open")}>

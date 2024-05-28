@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "@/styles/components/project.module.css";
 import { useEffect } from "react";
 import clsx from "clsx";
+import Link from "next/link";
 export default function Project({ project }) {
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -59,12 +60,20 @@ export default function Project({ project }) {
 					})}
 				</div>
 				<div className={styles.buttons}>
-					<button className={rajdhani.className}>
-						Voir le <span>projet</span>
-					</button>
-					<button className={rajdhani.className}>
-						Voir le <span>code</span>
-					</button>
+					<Link href={project.website ?? ""} target="blank">
+						<button
+							className={rajdhani.className}
+							data-disabled={project.website ? false : true}>
+							Voir le <span>projet</span>
+						</button>
+					</Link>
+					<Link href={project.code ?? ""} target="blank">
+						<button
+							className={rajdhani.className}
+							data-disabled={project.code ? false : true}>
+							Voir le <span>code</span>
+						</button>
+					</Link>
 				</div>
 			</div>
 			<div className={styles.card__right}>
