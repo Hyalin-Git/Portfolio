@@ -104,7 +104,6 @@ export default function Hero() {
 					{/* unlocker */}
 					{index === 0 && <Unlocker />}
 				</div>
-
 				<div className={styles.social}>
 					<div>
 						<a
