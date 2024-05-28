@@ -1,5 +1,6 @@
 import styles from "@/styles/components/about.module.css";
 import Image from "next/image";
+import { useEffect } from "react";
 export default function About() {
 	return (
 		<div className={styles.container}>
@@ -7,12 +8,11 @@ export default function About() {
 				{/* titile */}
 				<div className={styles.title}>
 					<h2>
-						Codeur
-						<br />
-						passionné<span className={styles.punctuation}>,</span>
-						<br />
-						<span className={styles.marginOne}>tisseur de</span>
-						<br />
+						<span className={styles.space}>Codeur </span>
+						<span className={styles.space}>
+							passionné<span className={styles.punctuation}>, </span>
+						</span>
+						<span className={styles.marginOne}>tisseur de </span>
 						<span className={styles.marginTwo}>
 							site web<span className={styles.punctuation}>.</span>
 						</span>

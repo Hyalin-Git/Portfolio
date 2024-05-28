@@ -22,8 +22,13 @@
 	padding: 0;
 }
 
+.space {
+	display: block;
+}
+
 .title .marginOne {
 	margin-left: 120px;
+	display: block;
 }
 
 .title .marginTwo {
@@ -176,23 +181,33 @@
 @media (max-width: 740px) {
 	.title {
 		font-size: 2rem;
+		margin-bottom: 10px;
 	}
 }
 
 @media (max-width: 690px) {
 	.container {
 		text-align: center;
+		width: 100%;
 	}
-	.title {
-		text-align: center;
+
+	.space {
+		display: inline;
 	}
+
 	.title .marginOne {
 		margin-left: 0px;
+		display: inline;
 	}
 
 	.title .marginTwo {
 		margin-left: 0px;
 	}
+	.bottom {
+		display: flex;
+		justify-content: center;
+	}
+
 	.image {
 		display: none;
 	}
@@ -240,15 +255,15 @@
 	}
 }
 
-@media (max-width: 450px) {
+@media (max-width: 360px) {
 	.title {
 		font-size: 1.2rem;
 	}
-	.skills h2 {
-		font-size: 1.5rem;
-	}
 
 	.experience h2 {
+		font-size: 1.5rem;
+	}
+	.skills h2 {
 		font-size: 1.5rem;
 	}
 }
