@@ -55,7 +55,7 @@
 	},
 	{
 		"id": 4,
-		"title": "Vous venez de dire Peter Parker ?",
+		"title": "Passionné par la photographie ?",
 		"name": "Oricam",
 		"description": "Oricam est un projet réalisé pendant ma formation. Il s'agit d'un site de e-commerce fictif spécialisé dans la vente d'appareils photo. L'objectif était de renforcer mes compétences en JavaScript en récupérant et en manipulant des données stockées dans le back-end pour les afficher côté front-end. Malheureusement, je n'ai plus accès au back-end, donc les appareils photo ne seront pas visibles sur le site. Cependant, vous pouvez toujours le visiter.",
 		"status": "done",

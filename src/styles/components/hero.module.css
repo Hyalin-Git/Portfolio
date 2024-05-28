@@ -308,7 +308,6 @@
 
 @media (max-width: 1024px) {
 	.content {
-		background-color: red;
 		padding: 0;
 		justify-content: center;
 		min-width: none;

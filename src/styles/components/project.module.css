@@ -91,7 +91,18 @@
 }
 
 .buttons {
+	display: flex;
 	margin-bottom: 20px;
+}
+.buttons > a:nth-of-type(1) > button::before {
+	width: 58%;
+}
+
+.buttons > a:nth-of-type(2) > button::before {
+	width: 61%;
+}
+.buttons > a > button:hover:before {
+	width: 120%;
 }
 
 .buttons button:nth-child(1) {
