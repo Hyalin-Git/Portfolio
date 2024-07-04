@@ -8,19 +8,20 @@ import clsx from "clsx";
 import { rajdhani } from "@/libs/fonts";
 import Unlocker from "./Unlocker";
 import { UnlockedContext } from "@/context/UnlockedContext";
+import Head from "next/head";
 
 export default function Hero() {
 	const { isUnlocked } = useContext(UnlockedContext);
 	const [index, setIndex] = useState(0);
 	const leftBackground = useRef(null);
 	const rightBackground = useRef(null);
-
-	const preloadImages = (imageUrls) => {
-		imageUrls.forEach((url) => {
-			const img = new Image();
-			img.src = url;
-		});
-	};
+	const PreloadImages = ({ images }) => (
+		<Head>
+			{images.map((image, idx) => (
+				<link key={idx} rel="preload" as="image" href={image} />
+			))}
+		</Head>
+	);
 
 	const banners = [
 		{
@@ -72,7 +73,7 @@ export default function Hero() {
 
 	useEffect(() => {
 		// Hydrate index color
-		preloadImages(banners.map((banner) => banner.image));
+
 		const indexTracker = document.getElementsByClassName("index-tracker");
 
 		for (let i = 0; i < indexTracker.length; i++) {
@@ -83,6 +84,7 @@ export default function Hero() {
 
 	return (
 		<div className={styles.container}>
+			<PreloadImages images={banners.map((banner) => banner.image)} />
 			<div className={styles.background} ref={leftBackground}>
 				<Image
 					src={banners[index]?.image}
