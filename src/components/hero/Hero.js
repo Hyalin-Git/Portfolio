@@ -15,6 +15,13 @@ export default function Hero() {
 	const leftBackground = useRef(null);
 	const rightBackground = useRef(null);
 
+	const preloadImages = (imageUrls) => {
+		imageUrls.forEach((url) => {
+			const img = new Image();
+			img.src = url;
+		});
+	};
+
 	const banners = [
 		{
 			id: 1,
@@ -65,6 +72,7 @@ export default function Hero() {
 
 	useEffect(() => {
 		// Hydrate index color
+		preloadImages(banners.map((banner) => banner.image));
 		const indexTracker = document.getElementsByClassName("index-tracker");
 
 		for (let i = 0; i < indexTracker.length; i++) {
