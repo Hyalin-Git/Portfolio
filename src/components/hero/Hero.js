@@ -174,7 +174,7 @@ export default function Hero() {
 						quality={100}
 						sizes="100vw"
 						alt="background"
-						priority={true}
+						priority
 						style={{
 							objectFit: "cover",
 						}}
