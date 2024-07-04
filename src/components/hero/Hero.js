@@ -15,13 +15,6 @@ export default function Hero() {
 	const [index, setIndex] = useState(0);
 	const leftBackground = useRef(null);
 	const rightBackground = useRef(null);
-	const PreloadImages = ({ images }) => (
-		<Head>
-			{images.map((image, idx) => (
-				<link key={idx} rel="preload" as="image" href={image} />
-			))}
-		</Head>
-	);
 
 	const banners = [
 		{
@@ -52,7 +45,10 @@ export default function Hero() {
 		},
 	];
 
-	const checkIndex = banners.length === index + 1 ? 0 : index + 1;
+	const checkIndex = useMemo(
+		() => (banners.length === index + 1 ? 0 : index + 1),
+		[index, banners]
+	);
 
 	function swapBanners(e) {
 		e.preventDefault();
@@ -83,118 +79,131 @@ export default function Hero() {
 	}, [index]);
 
 	return (
-		<div className={styles.container}>
-			<PreloadImages images={banners.map((banner) => banner.image)} />
-			<div className={styles.background} ref={leftBackground}>
-				<Image
-					src={banners[index]?.image}
-					fill
-					quality={100}
-					sizes="100vw"
-					priority
-					style={{
-						objectFit: "cover",
-					}}
-					alt="foreground"
-				/>
-				<div className={styles.content} data-unlocked={isUnlocked}>
-					{/* title */}
-					<div>
-						<div className={styles.title}>
-							<Markdown>{banners[index]?.text}</Markdown>
-						</div>
-						{banners[index].btn && (
-							<div className={styles.buttons}>
-								<Link href={`${banners[index].link}`}>
-									<button className={clsx(rajdhani.className, "hero-btn")}>
-										{banners[index].btn}
-									</button>
-								</Link>
-							</div>
-						)}
-					</div>
-					{/* unlocker */}
-					{!isUnlocked && <Unlocker />}
-				</div>
-				<div className={styles.social}>
-					<div>
-						<a
-							href="https://www.linkedin.com/in/n-t-dev-b72892265/"
-							target="_bank">
-							<Image
-								src="./images/svg/linkedIn.svg"
-								alt="yas"
-								width={40}
-								height={40}
-							/>
-						</a>
-					</div>
-					<div>
-						<a href="https://twitter.com/Hyalin_dev" target="_bank">
-							<Image
-								src="./images/svg/twitter.svg"
-								alt="yas"
-								width={40}
-								height={40}
-							/>
-						</a>
-					</div>
-					<div>
-						<a href="https://github.com/Hyalin-Git" target="_bank">
-							<Image
-								src="./images/svg/github.svg"
-								alt="yas"
-								width={40}
-								height={40}
-							/>
-						</a>
-					</div>
-				</div>
-				{/* index  */}
-
-				<div className={styles.index}>
-					{banners.map((banner, idx) => {
-						return (
-							<div
-								className={clsx("index-tracker")}
-								key={idx}
-								data-idx={idx}></div>
-						);
-					})}
-				</div>
-			</div>
-			{isUnlocked && (
-				<div
-					className={styles.background}
-					ref={rightBackground}
-					onClick={swapBanners}>
+		<>
+			<Head>
+				{banners.map((banner, idx) => (
+					<link
+						key={idx}
+						rel="preload"
+						href={banner.image}
+						as="image"
+						type="image/webp"
+						imagesrcset={`${banner.image} 1x`}
+					/>
+				))}
+			</Head>
+			<div className={styles.container}>
+				<div className={styles.background} ref={leftBackground}>
 					<Image
-						src={banners[checkIndex]?.image}
+						src={banners[index]?.image}
 						fill
 						quality={100}
 						sizes="100vw"
-						alt="background"
 						priority
 						style={{
 							objectFit: "cover",
 						}}
+						alt="foreground"
 					/>
-					<div className={styles.content}>
+					<div className={styles.content} data-unlocked={isUnlocked}>
+						{/* title */}
 						<div>
 							<div className={styles.title}>
-								<Markdown>{banners[checkIndex]?.text}</Markdown>
+								<Markdown>{banners[index]?.text}</Markdown>
 							</div>
-							{banners[checkIndex].btn && (
+							{banners[index].btn && (
 								<div className={styles.buttons}>
-									<button className={clsx(rajdhani.className, "hero-btn")}>
-										{banners[checkIndex]?.btn}
-									</button>
+									<Link href={`${banners[index].link}`}>
+										<button className={clsx(rajdhani.className, "hero-btn")}>
+											{banners[index].btn}
+										</button>
+									</Link>
 								</div>
 							)}
 						</div>
+						{/* unlocker */}
+						{!isUnlocked && <Unlocker />}
+					</div>
+					<div className={styles.social}>
+						<div>
+							<a
+								href="https://www.linkedin.com/in/n-t-dev-b72892265/"
+								target="_bank">
+								<Image
+									src="./images/svg/linkedIn.svg"
+									alt="yas"
+									width={40}
+									height={40}
+								/>
+							</a>
+						</div>
+						<div>
+							<a href="https://twitter.com/Hyalin_dev" target="_bank">
+								<Image
+									src="./images/svg/twitter.svg"
+									alt="yas"
+									width={40}
+									height={40}
+								/>
+							</a>
+						</div>
+						<div>
+							<a href="https://github.com/Hyalin-Git" target="_bank">
+								<Image
+									src="./images/svg/github.svg"
+									alt="yas"
+									width={40}
+									height={40}
+								/>
+							</a>
+						</div>
+					</div>
+					{/* index  */}
+
+					<div className={styles.index}>
+						{banners.map((banner, idx) => {
+							return (
+								<div
+									className={clsx("index-tracker")}
+									key={idx}
+									data-idx={idx}></div>
+							);
+						})}
 					</div>
 				</div>
-			)}
-		</div>
+				{isUnlocked && (
+					<div
+						className={styles.background}
+						ref={rightBackground}
+						onClick={swapBanners}>
+						<Image
+							src={banners[checkIndex]?.image}
+							fill
+							quality={100}
+							sizes="100vw"
+							alt="background"
+							priority
+							style={{
+								objectFit: "cover",
+							}}
+						/>
+						<div className={styles.content}>
+							<div>
+								<div className={styles.title}>
+									<Markdown>{banners[checkIndex]?.text}</Markdown>
+								</div>
+								{banners[checkIndex].btn && (
+									<div className={styles.buttons}>
+										<button className={clsx(rajdhani.className, "hero-btn")}>
+											{banners[checkIndex]?.btn}
+										</button>
+									</div>
+								)}
+							</div>
+						</div>
+					</div>
+				)}
+			</div>
+		</>
 	);
 }
