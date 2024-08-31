@@ -79,7 +79,8 @@
 
 .card__skills {
 	margin-bottom: 30px;
-	filter: invert(1);
+	filter: invert(100%) sepia(25%) saturate(46%) hue-rotate(259deg)
+		brightness(102%) contrast(102%);
 }
 
 .card:nth-child(even) .card__skills {
@@ -90,10 +91,6 @@
 	padding: 10px;
 }
 
-.buttons {
-	display: flex;
-	margin-bottom: 20px;
-}
 .buttons > a:nth-of-type(1) > button::before {
 	width: 58%;
 }
@@ -114,30 +111,6 @@
 	max-width: 640px;
 	width: 100%;
 }
-
-/* .card__right::before {
-	position: absolute;
-	content: "";
-	right: 0;
-	bottom: 0;
-	width: 45px;
-	height: 45px;
-	border-right: 8px solid white;
-	border-bottom: 8px solid white;
-}
-
-.card:nth-child(even) .card__right::before {
-	position: absolute;
-	content: "";
-	left: 0;
-	bottom: 0;
-	right: inherit;
-	width: 45px;
-	height: 45px;
-	border-left: 8px solid white;
-	border-right: inherit;
-	border-bottom: 8px solid white;
-} */
 
 .card__images {
 	display: flex;
@@ -342,14 +315,34 @@
 		font-size: 1rem;
 	}
 	.buttons button {
-		font-size: 1.5rem;
 		min-width: 150px;
+	}
+	.buttons a:nth-child(1) > button::before {
+		width: 61% !important;
+	}
+
+	.buttons a:nth-child(2) > button::before {
+		width: 63% !important;
+	}
+
+	.buttons > a > button:hover:before {
+		width: 120% !important;
 	}
 }
 
 @media (max-width: 380px) {
 	.buttons button {
-		font-size: 1.3rem;
 		min-width: 120px;
+	}
+	.buttons a:nth-child(1) > button::before {
+		width: 63% !important;
+	}
+
+	.buttons a:nth-child(2) > button::before {
+		width: 66% !important;
+	}
+
+	.buttons > a > button:hover:before {
+		width: 120% !important;
 	}
 }

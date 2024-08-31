@@ -55,7 +55,7 @@ button:not(.hero-btn) {
 	outline: none;
 	color: #282828;
 	font-weight: bold;
-	font-size: 1.5rem;
+	font-size: clamp(0.8rem, 3.5vw, 1.5rem);
 	overflow: hidden;
 	cursor: pointer;
 	max-width: 200px;
