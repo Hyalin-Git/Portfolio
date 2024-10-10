@@ -43,7 +43,9 @@ export default function About() {
 						/>
 						<br />
 						<button>
-							Télécharge<span>r mon cv</span>
+							<a href="/download/CV_Tombal_Nicolas.pdf" download>
+								Télécharge<span>r mon cv</span>
+							</a>
 						</button>
 					</div>
 				</div>
